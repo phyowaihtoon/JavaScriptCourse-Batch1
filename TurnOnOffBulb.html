@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Turn On/Off bulb</title>
+
+        <style>
+
+            img {
+                width: 200px;
+                height: 400px;
+            }
+
+        </style>
+    </head>
+
+   <body>
+
+
+        <div>
+            <img id="bulb" src="images/BulbOff.jpg">
+        </div>
+
+        <div>
+            <button onclick="turnOnLight()">Turn On</button>
+            <button onclick="turnOffLight()">Turn Off</button>
+        </div>
+
+
+        <script>
+
+            function turnOnLight(){
+                document.getElementById("bulb").src = "images/BulbOn.png";
+                document.getElementById("bulb").style = "width:350px;height:400px";
+            }
+
+            function turnOffLight(){
+                document.getElementById("bulb").src = "images/BulbOff.jpg";
+                document.getElementById("bulb").style = "width:200px;height:400px";
+            }
+
+
+        </script>
+
+    </body>
+
+</html>

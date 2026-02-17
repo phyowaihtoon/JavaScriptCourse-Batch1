@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Learn JS </title>
+
+        <style>
+
+            #StudentID {
+                background-color: orange;
+                color:white;
+                height: 50px;
+            }
+
+            #about {
+                background-color: lightgray;
+                color:white;
+                height: 50px;
+            }
+
+        </style>
+
+        <script>
+
+            function changeContent() {
+               // document.getElementById("StudentID").innerText = "Ko Ko Maung";
+
+               var myContent = document.getElementById("StudentID").innerText;
+
+               document.getElementById("about").innerText = myContent;
+
+               document.getElementById("StudentID").innerText = "";
+
+            }
+
+
+            function changeColor() {
+
+                document.getElementById("StudentID").style.backgroundColor = "blue";
+
+            }
+
+            function changeFontSize( ){
+                document.getElementById("about").style.fontSize = "25px";
+            }
+
+        </script>
+    </head>
+    <body>
+
+        <div id="StudentID" style="background-color: orange;
+                color:white;
+                height: 50px;">
+            Aye Chan Thu
+        </div>
+
+        <div id="about">
+
+        </div>
+
+        <br><br>
+
+        <button onclick="changeContent()" > Change Content </button>
+
+        <button onclick="changeColor()"> Change Color </button>
+
+        <button onclick="changeFontSize()"> Increase Font </button>
+
+    </body>
+</html>

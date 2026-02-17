@@ -1,0 +1,84 @@
+<script>
+
+    const marks = [
+        0.5, 87, 12, 54, 9, 76, 31, 45, 98, 2,
+        67, 19, 42, 88, 5, 33, 61, 74, 10, 50,
+        28, 83, 4, 1100, 17, 39, 56, 720, 8, 95,
+        21, 64, 47, 13, 82, 36, 59, 25, 90, 3,
+        68, 15, 41, 77, 52, 1100, 29, 84, 6, 99,
+        23, 87, 12, 54, 9, 76, 31, 45, 98, 2,
+        67, 19, 42, 88, 5, 33, 61, 74, 10, 50,
+        28, 83, 4, 1100, 17, 39, 56, 720, 8, 95,
+        21, 64, 47, 13, 82, 36, 59, 25, 90, 3,
+        68, 15, 41, 77, 52, 1100, 29, 84, 6, 99,
+        23, 87, 12, 54, 9, 76, 31, 45, 98, 2,
+        67, 19, 42, 88, 5, 33, 61, 74, 10, 50,
+        28, 83, 4, 1100, 17, 39, 56, 720, 8, 95,
+        21, 64, 47, 13, 82, 36, 59, 25, 90, 3,
+        68, 15, 41, 77, 52, 1100, 29, 84, 6, 99,
+        23, 87, 12, 54, 9, 76, 31, 45, 98, 2,
+        67, 19, 42, 88, 5, 3300, 61, 74, 10, 50,
+        28, 83, 4, 1100, 17, 39, 56, 720, 8, 95,
+        21, 64, 47, 13, 82, 36, 59, 25, 90, 3,
+        68, 15, 41, 77, 52, 1100, 29, 84, 6, 99
+    ];
+
+    console.log(" Marks : ", marks);
+    console.log(" No of Elements in array : ", marks.length);
+
+    function findMaxValue() {
+        let maxNum;
+
+        if (marks.length == 1) {
+            maxNum = marks[0];
+        }
+        else {
+            maxNum = marks[0];
+
+            for (let i = 1; i < marks.length; i++) {
+                let num = marks[i];
+
+                if (maxNum < num) {
+                    maxNum = num;
+                }
+
+            }
+
+        }
+
+        console.log(" The largest mark is :", maxNum);
+
+    }
+
+
+    function findMinValue() {
+        let minNum;
+
+        if (marks.length == 1) {
+            minNum = marks[0];
+        } else {
+            minNum = marks[0];
+
+            for (let i = 1; i < marks.length; i++) {
+                let num = marks[i]; 
+
+                if (minNum > num) {
+                    minNum = num;
+                }
+
+            }
+        }
+
+        console.log(" The smallest mark is :", minNum);
+    }
+
+    findMaxValue();
+
+    findMinValue();
+
+
+
+
+
+
+</script>

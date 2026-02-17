@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Add or Remove HTML content dynamically</title>
+    <style>
+        #container {
+            height: 50px;
+        }
+
+        .child {
+            position: relative;
+            height: 40px;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+
+        .child:nth-child(odd) {
+            background-color: lightgray;
+        }
+
+        .child:nth-child(even) {
+            background-color: gray;
+        }
+
+        .btn-close {
+            position: absolute;
+            top: 10px;
+            right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <input id="NoOfChildren">
+        <button onclick="displayContent()">Display Content</button>
+    </div>
+
+    <div id="container">
+
+    </div>
+
+    <script>
+
+        function displayContent() {
+            const containerElement = document.getElementById("container");
+
+            const textInput = document.getElementById("NoOfChildren").value;
+
+            const noOfChildren = Number.parseInt(textInput);
+
+            for (let i = 0; i < noOfChildren; i++) {
+                containerElement.innerHTML += `<div class="child"> Child ${i} <button class="btn-close" onclick="deleteContent(event)"> Close </button> </div>`;
+            }
+
+        }
+
+        function deleteContent(event) {
+            const isConfirmed = confirm("Are you sure you want to delete?");
+
+            if (isConfirmed) {
+                event.target.parentElement.remove();
+            } 
+            
+        }
+
+    </script>
+</body>
+
+</html>

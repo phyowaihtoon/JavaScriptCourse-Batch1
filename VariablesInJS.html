@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Learn Variables in JS</title>
+
+    <style>
+
+        div {
+            margin-bottom:  30px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div>
+        <label> Name :</label>
+        <input id="StudentName">
+
+        <label> Age :</label>
+        <input id="StudentAge">
+
+        <label> Address :</label>
+        <input id="StudentAddress">
+
+
+        <button onclick="showData()"> Show Data </button>
+        <button onclick="clearData()"> Clear Data </button>
+
+    </div>
+
+    <div>
+        <label> Number 1 :</label>
+        <input id="Number1">
+
+        <label> Number 2 :</label>
+        <input id="Number2">
+
+        <label> Result :</label>
+        <input id="Result">
+
+
+        <button onclick="sumNumbers()"> Sum</button>
+        <button onclick="clearNumbers()"> Clear Data </button>
+
+    </div>
+
+
+
+
+    <script>
+
+        //Show Data
+        //global variables
+        let studentName = "Aye Chan Thu";
+        let studentAge = 20;
+        let studentAddress = "Yangon";
+
+
+        function showData() {
+
+            document.getElementById("StudentName").value = studentName;
+            document.getElementById("StudentAge").value = studentAge;
+            document.getElementById("StudentAddress").value = studentAddress;
+
+        }
+
+        function clearData() {
+
+            document.getElementById("StudentName").value = "";
+            document.getElementById("StudentAge").value = "";
+            document.getElementById("StudentAddress").value = "";
+
+        }
+
+        //Sum Numbers , substract, multiply, divide
+
+        function sumNumbers(){
+            //local variables
+           let num1 = document.getElementById("Number1").value;
+           let num2 = document.getElementById("Number2").value;
+           
+
+           let result = Number(num1)  + Number(num2); //Calculation
+
+
+           document.getElementById("Result").value = result;
+
+        }
+
+        function clearNumbers() {
+
+            document.getElementById("Number1").value = "";
+            document.getElementById("Number2").value = "";
+            document.getElementById("Result").value = "";
+
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

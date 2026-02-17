@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Loop in JS </title>
+    <style>
+        #parent {
+            margin-top: 10px;
+        }
+
+        .child {
+            position: relative;
+            height: 50px;
+            border: 2px solid rgb(108, 108, 240);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .child:nth-child(odd) {
+            background-color: lightgray;
+        }
+
+        .child:hover {
+            background-color: lightblue;
+        }
+
+        #NoOfChild {
+            height: 30px;
+            width: 100px;
+        }
+
+        .btn-delete {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            height: 40px;
+            width: 70px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button onclick="displayChildren()">Display</button>
+        <label>Enter No. of Children</label>
+        <input id="NoOfChild">
+        <button onclick="displayChildrenUsingLoop()">Display Loop</button>
+    </div>
+
+    <div id="parent">
+    </div>
+
+    <script>
+
+        function displayChildren() {
+            let parentElement = document.getElementById("parent"); // <div id="parent"></div>
+
+            //parentElement.innerText="<div> Child </div> <div> Child </div> <div> Child </div>";
+            parentElement.innerHTML = `
+               <div class="child"> Child </div> 
+               <div class="child"> Child </div> 
+               <div class="child"> Child </div> 
+               <div class="child"> Child </div> 
+               <div class="child"> Child </div> 
+               <div class="child"> Child </div> 
+               <div class="child"> Child </div>`;
+
+        }
+
+        function displayChildrenUsingLoop() {
+            let parentElement = document.getElementById("parent"); // <div id="parent"></div>
+            let childElements = "";
+
+            let inputTextValue = document.getElementById("NoOfChild").value;
+            let noOfChildren = Number.parseInt(inputTextValue);
+
+            //interpolation
+            //interpolate (v) = insert
+
+            for (let i = 1; i <= noOfChildren; i++) {
+
+                childElements += `<div class="child"> Child ${i}
+                    <button class="btn-delete" onclick="deleteContent(event)"> Delete </button> 
+                    </div>`;
+
+            }
+
+            parentElement.innerHTML = childElements;
+        }
+
+        function deleteContent(event) {
+            let btnElement = event.target;
+
+            let isConfirmed = confirm("Are you sure to delete this content?");
+
+            if (isConfirmed == true) {
+                btnElement.parentElement.remove();
+            }
+
+
+        }
+
+    </script>
+</body>
+
+</html>

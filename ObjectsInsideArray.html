@@ -1,0 +1,77 @@
+<script>
+
+    let student1 = {
+        name : "Mg Mg",
+        age : 10
+    };
+
+    
+    let student2 = {
+        name : "Mya Mya",
+        age : 12
+    };
+
+    
+    let student3 = {
+        name : "Soe Soe",
+        age : 14
+    };
+
+
+    let studentArray = [student1 , student2, student3];
+
+
+    for(let i=0; i < studentArray.length; i++){
+        let studentObj = studentArray[i];
+
+        console.log("Name : ", studentObj.name," , Age : ", studentObj.age );
+    }
+
+
+    let studentArray2 = [
+        {
+            name : "Khin Khin",
+            age : 40
+        },
+        {
+            name : "Moe Moe",
+            age : 55
+        },
+        {
+            name : "Tin Tin",
+            age : 33
+        }
+    ];
+
+    for(let i=0; i < studentArray2.length; i++){
+        let studentObj = studentArray2[i];
+
+        console.log("Name : ", studentObj.name," , Age : ", studentObj.age );
+    }
+
+    let numArr = [10,20];
+
+    numArr[0] = 60; // Update old element
+
+    numArr[2] = 40; // Add new element
+
+    numArr[4] = 90; // Add new element
+
+    numArr[3] = 55 // Update old element
+
+    numArr[numArr.length] = 100; 
+    // length 6
+    numArr[numArr.length] = 200;
+    // length 7
+    numArr[numArr.length] = 300;
+    // length 8
+    numArr[numArr.length] = 400;
+    // length 9
+
+    for(let i=0; i< numArr.length; i++){
+        console.log(numArr[i]);
+    }
+
+
+
+</script>

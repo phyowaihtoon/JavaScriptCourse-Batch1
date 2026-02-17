@@ -1,0 +1,39 @@
+<!--
+    I want to make a game where a ball is kicked and bounces around the screen. 
+    I want to use CSS animations to make the ball move and bounce off the walls of the screen. 
+    I will use keyframes to define the animation and set the animation properties to make it loop infinitely. 
+    The ball will be represented by a Unicode character (⚽) and will be styled with a large font size to make it visible on the screen.
+-->
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball Animation</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .ball {
+            font-size: 50px;
+            animation: bounce 5s linear infinite;
+        }
+        @keyframes bounce {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(300px, 0); }
+            50% { transform: translate(300px, 300px); }
+            75% { transform: translate(0, 300px); }
+            100% { transform: translate(0, 0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="ball">⚽</div>
+</body>
+</html>

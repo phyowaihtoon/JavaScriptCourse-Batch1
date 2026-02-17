@@ -1,0 +1,75 @@
+<!--
+    I want to make a game where a ball is kicked and it will go into the goal.
+    I will use JavaScript to create the animation of the ball being kicked and moving towards the goal.
+    When the ball hits the goal, it will reset to the starting position.
+    I will use CSS to style the ball and the goal, and I will use keyframes to define the animation of the ball moving straight towards the goal.
+    The ball will be represented by a Unicode character (⚽) and the goal will be represented by a simple rectangle. 
+    The animation will loop infinitely to create a continuous kicking effect.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kick Ball Animation</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .ball {
+            font-size: 50px;
+            --kick-distance: 0px;
+        }
+        .goal {
+            width: 200px;
+            height: 100px;
+            border-style: solid;
+            border-color:red;
+            border-left: none;
+            border-top-width:10px;
+            border-right-width:10px;
+            border-bottom-width:10px;
+            position: absolute;
+            right: 50px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        @keyframes kick {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(var(--kick-distance), 0); }
+        }
+    </style>
+</head>
+<body>
+    <!-- On clicking the button, the ball will be kicked towards the goal -->
+    
+    <div>
+        <button onclick="kickBall()"> Kick </button>
+    </div>
+
+    <div class="ball">⚽</div>
+    <div class="goal"></div>
+
+    <script>
+        function kickBall() {
+            const ball = document.querySelector('.ball');
+            const goal = document.querySelector('.goal');
+            const ballRect = ball.getBoundingClientRect();
+            const goalRect = goal.getBoundingClientRect();
+            const distance = goalRect.right - ballRect.left -70;
+
+            ball.style.setProperty('--kick-distance', `${distance}px`);
+            ball.style.animation = 'none';
+            void ball.offsetWidth;
+            ball.style.animation = 'kick 0.1s linear forwards';
+        }
+    </script>
+    
+</body>
+</html>

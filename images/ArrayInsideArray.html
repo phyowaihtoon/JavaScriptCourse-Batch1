@@ -1,0 +1,29 @@
+<script>
+
+    let fruits = ["Apple", "Orange", "Guava", "Potato"];
+
+    let marks = [40, 20, 80, 90, 100, 10];
+
+    let parentArr = [
+        ["Apple", "Orange", "Guava", "Potato"],
+        [40, 20, 80, 90, 100, 10],
+        [22.5, 200.5, 70.99],
+        ["Yangon", "Mandalay", "Magway", "Salin"]
+    ];
+
+    for (let outer = 0; outer < parentArr.length; outer++) {
+
+        let innerArr = parentArr[outer];
+        let innerArrData = "";
+
+        for (let inner = 0; inner < innerArr.length; inner++) {
+            innerArrData += innerArr[inner] + " , ";
+        }
+
+        console.log(innerArrData);
+        console.log("...........................................")
+
+
+    }
+
+</script>
