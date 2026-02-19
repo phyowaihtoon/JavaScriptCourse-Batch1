@@ -31,6 +31,10 @@
             background-color: rgb(43, 43, 228);
         }
 
+        #btn-update {
+            background-color: rgb(43, 43, 228);
+        }
+
         #btn-clear {
             background-color: rgb(43, 43, 228);
         }
@@ -79,6 +83,10 @@
 <body>
     <h1>Product Inventory</h1>
     <div>
+
+        <label>ID</label>
+        <input id="product-id" disabled>
+
         <label>Code</label>
         <input id="product-code">
 
@@ -95,6 +103,7 @@
 
     <div id="button-container">
         <button id="btn-add" onclick="addProduct()"> Add </button>
+        <button id="btn-update" onclick="updateProduct()"> Update </button>
         <button id="btn-clear" onclick="clearProduct()"> Clear </button>
     </div>
 
@@ -102,6 +111,7 @@
         <table id="product-table">
             <thead>
                 <tr>
+                    <th>ID</th>
                     <th>Code</th>
                     <th>Name</th>
                     <th>Unit Price</th>
@@ -116,6 +126,8 @@
 
     <script>
 
+        let productId = 1;
+
         function addProduct() {
             let productCode = document.getElementById("product-code").value;
             let productName = document.getElementById("product-name").value;
@@ -126,6 +138,7 @@
 
             tableBodyElement.innerHTML += `
                     <tr>
+                        <td>${productId} </td>
                         <td> ${productCode} </td>
                         <td> ${productName} </td>
                         <td> ${unitPrice} </td>
@@ -137,6 +150,7 @@
                     </tr>
                     `;
 
+            productId++;
         }
 
         function bindProduct(event) {
@@ -148,16 +162,19 @@
 
             let tdArray = trElement.children; // [td, td, td, td, td.action-column]
 
-            let tdCode = tdArray[0];
-            let tdName = tdArray[1];
-            let tdUnitPrice = tdArray[2];
-            let tdQuantity = tdArray[3];
+            let tdID = tdArray[0];
+            let tdCode = tdArray[1];  //<td> ${productCode} </td>
+            let tdName = tdArray[2]; //<td> ${productName} </td>
+            let tdUnitPrice = tdArray[3];
+            let tdQuantity = tdArray[4];
 
+            let productID = tdID.innerText;
             let productCode = tdCode.innerText;
             let productName = tdName.innerText;
             let unitPrice = tdUnitPrice.innerText;
             let quantity = tdQuantity.innerText;
 
+            document.getElementById("product-id").value = productID;
             document.getElementById("product-code").value = productCode;
             document.getElementById("product-name").value = productName;
             document.getElementById("unit-price").value = unitPrice;
@@ -183,8 +200,52 @@
             document.getElementById("product-name").value = "";
             document.getElementById("unit-price").value = "";
             document.getElementById("quantity").value = "";
+            document.getElementById("product-id").value ="";
         }
 
+        function updateProduct() {
+
+            //1. Get product information updated by user
+            let productID = document.getElementById("product-id").value;
+            let productCode = document.getElementById("product-code").value;
+            let productName = document.getElementById("product-name").value;
+            let unitPrice = document.getElementById("unit-price").value;
+            let quantity = document.getElementById("quantity").value;
+
+            //2. Find that product inside the table (array)
+
+            let trElements = document.getElementById("table-body").children; //[tr, tr, tr, tr, tr]
+
+            for (let i = 0; i < trElements.length; i++) {
+                let trElement = trElements[i];
+                let tdElements = trElement.children;
+
+                let tdIDElement = tdElements[0]; //<td> ${productID} </td>
+                let existingProductID = tdIDElement.innerText;
+
+                if (productID == existingProductID) {
+                    //3. Update the row
+
+                    document.getElementById("table-body").children[i].innerHTML = `
+                        <td>${productID} </td>
+                        <td> ${productCode} </td>
+                        <td> ${productName} </td>
+                        <td> ${unitPrice} </td>
+                        <td> ${quantity} </td>
+                        <td class="action-column"> 
+                            <button class="btn-edit" onclick="bindProduct(event)"> Edit </button> 
+                            <button class="btn-delete" onclick="deleteProduct(event)"> Delete </button> 
+                        </td>
+                    `;
+
+                    break;
+                }
+
+
+            }
+
+
+        }
     </script>
 </body>
 
