@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Product Inventory</title>
+
+    <style>
+        label,
+        input,
+        select {
+            height: 30px;
+        }
+
+        input {
+            padding-left: 5px;
+        }
+
+        #button-container {
+            margin-top: 20px;
+            margin-left: 50px;
+        }
+
+        button {
+            width: 70px;
+            height: 30px;
+            margin-left: 20px;
+            color: white;
+            border-radius: 5px;
+        }
+
+        #btn-add {
+            background-color: rgb(43, 43, 228);
+        }
+
+        #btn-update {
+            background-color: rgb(43, 43, 228);
+        }
+
+        #btn-clear {
+            background-color: rgb(43, 43, 228);
+        }
+
+        .btn-delete {
+            background-color: red;
+        }
+
+        .btn-edit {
+            background-color: rgb(43, 43, 228);
+        }
+
+        #table-container {
+            padding-top: 20px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        table thead tr th {
+            background-color: rgb(228, 169, 58);
+            color: white;
+            height: 50px;
+        }
+
+        table tbody tr {
+            height: 30px;
+            cursor: pointer;
+        }
+
+        table tbody tr:nth-child(odd) {
+            background-color: lightgray;
+        }
+
+        table tbody tr:hover {
+            background-color: rgb(86, 86, 218);
+        }
+
+        .action-column {
+            text-align: center;
+        }
+
+        .form-section {
+            margin-top: 12px;
+            border: 1px solid lightgray;
+            padding: 10px;
+        }
+
+        legend {
+            font-weight: bold;
+        }
+
+        .form-row {
+            margin-top: 8px;
+            display: flex;
+            /*  align-items: center; */
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .form-row label {
+           /* flex: 0 0 100px; */
+           flex-grow: 1;
+        }
+
+        .form-row input,
+        .form-row select {
+            flex-grow: 1;
+            /*flex-basis: 120px;*/
+            /*flex: 1 1 100px;*/
+            min-width: 100px;
+            max-width: 200px;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 700px) {
+            .form-row label {
+                flex: 0 0 100%;
+            }
+
+            .form-row input,
+            .form-row select {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Product Inventory</h1>
+    <fieldset class="form-section">
+        <legend>Product Information</legend>
+        <div class="form-row">
+            <label>ID</label>
+            <input id="product-id" disabled>
+
+            <label>Code</label>
+            <input id="product-code">
+
+            <label>Barcode</label>
+            <input id="barcode">
+
+            <label>Name</label>
+            <input id="product-name">
+        </div>
+
+        <div class="form-row">
+            <label> Category</label>
+            <!-- Category related to foods , dirnks , personal care -->
+            <select id="category">
+                <option value="foods">Foods</option>
+                <option value="drinks">Drinks</option>
+                <option value="personal-care">Cosmetics</option>
+            </select>
+
+            <label>Supplier Name</label>
+            <input id="supplier-name">
+
+            <label>Expiry Date</label>
+            <input id="expiry-date" type="date">
+
+            <label> Status </label>
+            <select id="status">
+                <option value="active">Active</option>
+                <option value="inactive">Inactive</option>
+            </select>
+
+        </div>
+    </fieldset>
+
+    <fieldset class="form-section">
+        <legend>Inventory Information</legend>
+        <div class="form-row">
+            <label>Quantity</label>
+            <input id="quantity">
+
+            <label> Unit of Measure</label>
+            <!-- Unit of measure related to kg, liter, piece -->
+            <select id="unit-of-measure">
+                <option value="kg">Kg</option>
+                <option value="liter">Liter</option>
+                <option value="piece">pcs (Piece)</option>
+            </select>
+        </div>
+    </fieldset>
+
+    <fieldset class="form-section">
+        <legend>Pricing Information</legend>
+        <div class="form-row">
+            <label>Cost Price</label>
+            <input id="cost-price">
+
+            <label>Selling Price</label>
+            <input id="unit-price">
+        </div>
+    </fieldset>
+
+
+
+    <div id="button-container">
+        <button id="btn-add" onclick="addProduct()"> Add </button>
+        <button id="btn-update" onclick="updateProduct()"> Update </button>
+        <button id="btn-clear" onclick="clearProduct()"> Clear </button>
+    </div>
+
+    <div id="table-container">
+        <table id="product-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Code</th>
+                    <th>Barcode</th>
+                    <th>Name</th>
+                    <th>Selling Price</th>
+                    <th>Cost Price</th>
+                    <th>Quantity</th>
+                    <th>Category</th>
+                    <th>Unit of Measure</th>
+                    <th>Status</th>
+                    <th>Supplier Name</th>
+                    <th>Expiry Date</th>
+                    <th>#</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+
+        let productId = 1;
+
+        function validateProduct(productCode, productName, unitPrice, costPrice, quantity) {
+            if (
+                productCode.trim() === "" ||
+                productName.trim() === "" ||
+                unitPrice.trim() === "" ||
+                costPrice.trim() === "" ||
+                quantity.trim() === ""
+            ) {
+                alert("Please fill all required fields.");
+                return false;
+            }
+
+            if (
+                isNaN(unitPrice) ||
+                isNaN(costPrice) ||
+                isNaN(quantity) ||
+                Number(unitPrice) < 0 ||
+                Number(costPrice) < 0 ||
+                Number(quantity) < 0
+            ) {
+                alert("Unit Price, Cost Price and Quantity must be valid non-negative numbers.");
+                return false;
+            }
+
+            return true;
+        }
+
+        function addProduct() {
+            let productCode = document.getElementById("product-code").value;
+            let barcode = document.getElementById("barcode").value;
+            let productName = document.getElementById("product-name").value;
+            let unitPrice = document.getElementById("unit-price").value;
+            let costPrice = document.getElementById("cost-price").value;
+            let quantity = document.getElementById("quantity").value;
+            let category = document.getElementById("category").value;
+            let unitOfMeasure = document.getElementById("unit-of-measure").value;
+            let status = document.getElementById("status").value;
+            let supplierName = document.getElementById("supplier-name").value;
+            let expiryDate = document.getElementById("expiry-date").value;
+
+            if (!validateProduct(productCode, productName, unitPrice, costPrice, quantity)) {
+                return;
+            }
+
+            let tableBodyElement = document.getElementById("table-body");
+
+            tableBodyElement.innerHTML += `
+                    <tr>
+                        <td>${productId} </td>
+                        <td> ${productCode} </td>
+                        <td> ${barcode} </td>
+                        <td> ${productName} </td>
+                        <td> ${unitPrice} </td>
+                        <td> ${costPrice} </td>
+                        <td> ${quantity} </td>
+                        <td> ${category} </td>
+                        <td> ${unitOfMeasure} </td>
+                        <td> ${status} </td>
+                        <td> ${supplierName} </td>
+                        <td> ${expiryDate} </td>
+                        <td class="action-column"> 
+                            <button class="btn-edit" onclick="bindProduct(event)"> Edit </button> 
+                            <button class="btn-delete" onclick="deleteProduct(event)"> Delete </button> 
+                        </td>
+                    </tr>
+                    `;
+
+            productId++;
+            clearProduct();
+        }
+
+        function bindProduct(event) {
+            let btnEditElement = event.target; // <button class="btn-edit" onclick="bindProduct(event)"> Edit </button> 
+
+            let tdElement = btnEditElement.parentElement; //<td class="action-column"> 
+
+            let trElement = tdElement.parentElement; // tr
+
+            let tdArray = trElement.children;
+
+            let tdID = tdArray[0];
+            let tdCode = tdArray[1];  //<td> ${productCode} </td>
+            let tdBarcode = tdArray[2];
+            let tdName = tdArray[3]; //<td> ${productName} </td>
+            let tdUnitPrice = tdArray[4];
+            let tdCostPrice = tdArray[5];
+            let tdQuantity = tdArray[6];
+            let tdCategory = tdArray[7];
+            let tdUnitOfMeasure = tdArray[8];
+            let tdStatus = tdArray[9];
+            let tdSupplierName = tdArray[10];
+            let tdExpiryDate = tdArray[11];
+
+            let productID = tdID.innerText;
+            let productCode = tdCode.innerText;
+            let barcode = tdBarcode.innerText;
+            let productName = tdName.innerText;
+            let unitPrice = tdUnitPrice.innerText;
+            let costPrice = tdCostPrice.innerText;
+            let quantity = tdQuantity.innerText;
+            let category = tdCategory.innerText;
+            let unitOfMeasure = tdUnitOfMeasure.innerText;
+            let status = tdStatus.innerText;
+            let supplierName = tdSupplierName.innerText;
+            let expiryDate = tdExpiryDate.innerText;
+
+            document.getElementById("product-id").value = productID;
+            document.getElementById("product-code").value = productCode;
+            document.getElementById("barcode").value = barcode;
+            document.getElementById("product-name").value = productName;
+            document.getElementById("unit-price").value = unitPrice;
+            document.getElementById("cost-price").value = costPrice;
+            document.getElementById("quantity").value = quantity;
+            document.getElementById("category").value = category;
+            document.getElementById("unit-of-measure").value = unitOfMeasure;
+            document.getElementById("status").value = status;
+            document.getElementById("supplier-name").value = supplierName;
+            document.getElementById("expiry-date").value = expiryDate;
+
+
+        }
+
+        function deleteProduct(event) {
+            let deleteElement = event.target;
+
+            let isConfirmed = confirm("Are you sure to delete this product?");
+
+            if (isConfirmed) {
+                deleteElement.parentElement.parentElement.remove();
+            }
+
+
+        }
+
+        function clearProduct() {
+            document.getElementById("product-code").value = "";
+            document.getElementById("barcode").value = "";
+            document.getElementById("product-name").value = "";
+            document.getElementById("unit-price").value = "";
+            document.getElementById("cost-price").value = "";
+            document.getElementById("quantity").value = "";
+            document.getElementById("supplier-name").value = "";
+            document.getElementById("expiry-date").value = "";
+            document.getElementById("category").selectedIndex = 0;
+            document.getElementById("unit-of-measure").selectedIndex = 0;
+            document.getElementById("status").selectedIndex = 0;
+            document.getElementById("product-id").value = "";
+        }
+
+        function updateProduct() {
+
+            //1. Get product information updated by user
+            let productID = document.getElementById("product-id").value;
+            let productCode = document.getElementById("product-code").value;
+            let barcode = document.getElementById("barcode").value;
+            let productName = document.getElementById("product-name").value;
+            let unitPrice = document.getElementById("unit-price").value;
+            let costPrice = document.getElementById("cost-price").value;
+            let quantity = document.getElementById("quantity").value;
+            let category = document.getElementById("category").value;
+            let unitOfMeasure = document.getElementById("unit-of-measure").value;
+            let status = document.getElementById("status").value;
+            let supplierName = document.getElementById("supplier-name").value;
+            let expiryDate = document.getElementById("expiry-date").value;
+
+            if (productID.trim() === "") {
+                alert("Please select a product to update.");
+                return;
+            }
+
+            if (!validateProduct(productCode, productName, unitPrice, costPrice, quantity)) {
+                return;
+            }
+
+            //2. Find that product inside the table (array)
+
+            let trElements = document.getElementById("table-body").children; //[tr, tr, tr, tr, tr]
+
+            for (let i = 0; i < trElements.length; i++) {
+                let trElement = trElements[i];
+                let tdElements = trElement.children;
+
+                let tdIDElement = tdElements[0]; //<td> ${productID} </td>
+                let existingProductID = tdIDElement.innerText;
+
+                if (productID == existingProductID) {
+                    //3. Update the row
+
+                    document.getElementById("table-body").children[i].innerHTML = `
+                        <td>${productID} </td>
+                        <td> ${productCode} </td>
+                        <td> ${barcode} </td>
+                        <td> ${productName} </td>
+                        <td> ${unitPrice} </td>
+                        <td> ${costPrice} </td>
+                        <td> ${quantity} </td>
+                        <td> ${category} </td>
+                        <td> ${unitOfMeasure} </td>
+                        <td> ${status} </td>
+                        <td> ${supplierName} </td>
+                        <td> ${expiryDate} </td>
+                        <td class="action-column"> 
+                            <button class="btn-edit" onclick="bindProduct(event)"> Edit </button> 
+                            <button class="btn-delete" onclick="deleteProduct(event)"> Delete </button> 
+                        </td>
+                    `;
+
+                    clearProduct();
+                    break;
+                }
+
+
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>
