@@ -49,7 +49,7 @@ function addProduct() {
         return;
     }
 
-    products[products.length] = product;
+    products[products.length] = product; // Add product object to products array
 
     productId++;
 
@@ -121,7 +121,7 @@ function showProducts() {
                     <td>${product.quantity} </td>
                     <td class="action-column">
                         <button class="btn-edit">Edit</button>
-                        <button class="btn-delete">Delete</button>
+                        <button class="btn-delete" onclick="deleteProduct(${product.id})">Delete</button>
                     </td>
                 </tr>`;
 
@@ -132,7 +132,28 @@ function showProducts() {
 
 //Implement a function to delete product from products array and show in table
 function deleteProduct(productId) {
+    
+    let index = -1; // to store index of an array
 
+    //Find the index of search product 
+    for(let i=0; i<products.length; i++){
+        let productObj = products[i];
+
+        if(productObj.id === productId){
+            index = i;
+            break;
+        }
+    }
+
+    //Shift Elements
+    for(let i=index; i < products.length -1; i++){
+        products[i] = products[i+1];
+    }
+
+    products.length --;
+
+    //Show Products
+    showProducts();
 }
 
 
