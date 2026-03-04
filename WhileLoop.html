@@ -1,0 +1,49 @@
+<script>
+
+    let marks = [45, 67, 89, 90, 56];
+    let index = 5; //Step 1
+
+    while (index < marks.length) { // Step 2
+        console.log("Start while");
+
+        let data = marks[index]; //Step 3
+        if (data == 89) {
+            break;
+        }
+
+        console.log("Data : ", data);
+
+        index++; // Step 4
+    }
+
+    console.log("......................................");
+
+    for (let i = 0; i < marks.length; i++) {
+        let data = marks[i];
+        if (data == 89) {
+            break;
+        }
+        console.log("Data : ", data);
+    }
+
+    console.log("......................................");
+
+    let k = 0;
+
+    do {
+
+        let data = marks[k];
+
+        if (data == 89) {
+            break;
+        }
+
+        console.log("Data : ", data);
+
+        k++;
+
+    } while (k < marks.length)
+
+    console.log("Done");
+
+</script>

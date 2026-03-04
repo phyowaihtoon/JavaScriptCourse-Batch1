@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Product Inventory</title>
+
+    <link rel="stylesheet" href="ProductInventoryV3.css">
+    
+</head>
+
+<body>
+    <h1>Product Inventory</h1>
+    <fieldset>
+        <legend>Product Information</legend>
+        <div class="form-row">
+
+            <label>ID</label>
+            <input id="product-id" disabled>
+
+            <label>Code</label>
+            <input id="product-code">
+
+            <label>Barcode</label>
+            <input id="product-barcode">
+
+            <label>Name</label>
+            <input id="product-name">
+
+        </div>
+
+        <div class="form-row">
+
+            <label>Category</label>
+            <select id="category">
+                <option value="0">Select</option>
+                <option value="1"> Beverages </option>
+                <option value="2"> Snacks </option>
+                <option value="3"> Dairy </option>
+                <option value="4"> Bakery </option>
+                <option value="5"> Cosmetics </option>
+                <option value="6"> Medicine </option>
+            </select>
+
+            <label>Supplier</label>
+            <input id="supplier">
+
+            <label>Expiry Date</label>
+            <input id="expiry-date" type="date">
+
+            <label>Status</label>
+            <select id="status">
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+            </select>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Pricing Information</legend>
+        <div class="form-row">
+
+            <label>Cost Price</label>
+            <input id="cost-price">
+
+            <label>Selling Price</label>
+            <input id="selling-price">
+
+        </div>
+    </fieldset>
+
+
+    <fieldset>
+        <legend>Inventory Details</legend>
+        <div class="form-row">
+
+            <label>Quantity</label>
+            <input id="quantity">
+
+            <label>Unit of Measure</label>
+            <select id="unit-of-measure">
+                <option value="Piece">Piece</option>
+                <option value="Kilogram">Kilogram</option>
+                <option value="Liter">Liter</option>
+                <option value="Pack">Pack</option>
+                <option value="Box">Box</option>
+            </select>
+
+        </div>
+    </fieldset>
+
+    <div id="button-container">
+        <button id="btn-add"> Add </button>
+        <button id="btn-update" onclick="updateProduct()"> Update </button>
+        <button id="btn-clear"> Clear </button>
+    </div>
+
+    <div id="table-container">
+        <table id="product-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Code</th>
+                    <th>Name</th>
+                    <th>Unit Price</th>
+                    <th>Quantity</th>
+                    <th>#</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+            </tbody>
+        </table>
+    </div>
+
+    
+    <script src="ProductInventoryV3.js"></script>
+</body>
+
+</html>

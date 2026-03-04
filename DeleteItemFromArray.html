@@ -1,0 +1,31 @@
+<script>
+    let numberArray = [10, 20, 30, 40, 50];
+
+    console.log("Before deletion: " + numberArray);
+    console.log("Length of array: " + numberArray.length);
+
+    let number = 30; 
+
+    //Find index of number in array
+    let index = -1;
+    for (let i = 0; i < numberArray.length; i++) {
+        if (numberArray[i] === number) {
+            index = i;
+            break;
+        }
+    }
+
+    //Delete number from array if found
+    if(index !== -1) {
+        //Remove number from array manually
+        for (let i = index; i < numberArray.length - 1; i++) {
+            numberArray[i] = numberArray[i + 1];
+        }
+        //Remove last element
+        numberArray.length = numberArray.length - 1;
+    } 
+   
+
+    console.log("After deletion: " + numberArray);
+    console.log("Length of array: " + numberArray.length);
+</script>
