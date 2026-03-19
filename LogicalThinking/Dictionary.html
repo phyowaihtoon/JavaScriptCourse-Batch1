@@ -1,0 +1,37 @@
+<script>
+
+    //Create a dictionary to store word and its meaning. The dictionary should have at least 5 entries. Each entry should have a word and its meaning.
+    let dictionary = [
+        {
+           word: "cat",
+           meaning:"ကြောင်"
+        },
+        {
+            word:"dog",
+            meaning:"ခွေး"
+        },
+        {
+            word:"momkey",
+            meaning:"မျောက်"
+        }
+    ];
+
+
+    function search(searchValue){
+
+        for(let i=0; i < dictionary.length; i++){
+            let data = dictionary[i];
+
+            if(data.word === searchValue){
+                console.log(searchValue, " : ", data.meaning);
+                break;
+            }
+
+        }
+    }
+
+    search("cat");
+
+    
+
+</script>

@@ -1,0 +1,55 @@
+<script>
+
+
+    let starLines1 = "    *\n   * *\n  * * *\n * * * *\n* * * * *";
+
+    console.log(starLines1);
+
+
+    let lines = 20;
+    let stars = "";
+
+    for (let i = 1; i <= lines; i++) {
+
+        for (let k = 1; k <= i; k++) {
+            stars += "* ";
+        }
+
+        stars += "\n";
+    }
+
+    console.log(stars);
+
+    /*
+    noOfLines = 5
+    Outer Loop, Space Loop , Star Loop
+    line 1 = 	space - 4 ( line 1 < noOfLines )= 1 star ( 1 - line no.)
+    line 2 = 	space - 3 ( line 2 < noOfLines ) = 2 stars ( 1 - line no.)
+    line 3 = 	space - 2 ( line 3 < noOfLines ) = 3 stars ( 1 - line no.)
+    line 4 = 	space - 1 ( line 4 < noOfLines ) = 4 stars  ( 1 - line no.)
+    line 5 = 	space - 0 ( line 5 < noOfLines ) = 5 stars ( 1 - line no.)
+    */
+
+    let noOfLines = 5;
+    let starLines = "";
+
+    for (let outer = 1; outer <= noOfLines; outer++) {
+
+        //Space Loop
+        for (let space = outer; space < noOfLines; space++) {
+            starLines += "=";
+        }
+
+        //Star Loop
+        for (let star = 1; star <= outer; star++) {
+            starLines += "& ";
+        }
+
+        starLines += "\n";
+
+    }
+
+    console.log(starLines);
+
+
+</script>

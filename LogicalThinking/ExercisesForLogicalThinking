@@ -1,0 +1,43 @@
+1. Reverse a Number
+Skill: Loop + arithmetic breakdown
+e.g. 1234 becomes 4321 by repeatedly taking the last digit and building the reversed number.
+
+2. Check Even or Odd
+Skill: Conditional logic
+
+3. Count Vowels in a String
+Skill: String traversal
+
+4. Find Smallest Number in Array
+Skill: Comparison logic
+
+5. Find Largest Number in Array
+Skill: Comparison logic
+
+6. Palindrome Check
+Skill: Symmetry thinking
+e.g. "madam" is a palindrome because it reads the same backward and forward.
+
+7. Sum of Digits
+Skill: Decomposition
+
+8. FizzBuzz (Classic Interview Question)
+Skill: Multiple conditions
+e.g. For numbers 1 to 15, print "Fizz" for multiples of 3, "Buzz" for multiples of 5, and "FizzBuzz" for multiples of both.
+
+9. Factorial of a Number
+Skill: Iterative multiplication
+e.g. 5! = 5 × 4 × 3 × 2 × 1 = 120
+
+10. Find Duplicate Elements in Array
+Skill: Hashing / memory thinking
+
+11. Print a Right Triangle Pattern
+Skill: Nested loops + visualization
+
+12. What is Fibonacci Sequence?
+Each number is the sum of the previous two:
+0, 1, 1, 2, 3, 5, 8, 13...
+
+Rule:
+F(n) = F(n-1) + F(n-2)

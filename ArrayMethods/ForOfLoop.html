@@ -1,0 +1,79 @@
+<script>
+
+    let  numbers = [10,20,30,40,50]; //iterable object
+
+    //Traditional For loop
+
+    console.log("========= Traditional For Loop ========")
+   
+    for(let i=0; i<numbers.length; i++){
+        let data = numbers[i];
+        console.log(data);
+    }
+
+    console.log("========= For of loop ========")
+
+    for(let num of numbers){
+        console.log(num);
+    }
+
+     
+    let studentList = [
+        {
+            name: "Mg Mg",
+            age :20
+        },
+        {
+            name : "Mya Mya",
+            age : 44
+        },
+        {
+            name: "Hla Hla",
+            age : 30
+        },
+    ];
+
+    console.log("========= Traditional For Loop over Student List ========");
+
+    for(let i=0; i < studentList.length; i++){
+        let student = studentList[i];
+
+        console.log("Name : ", student.name , ", Age : ", student.age);
+    }
+
+    console.log("========= For of loop over Student List ========");
+
+    for(let student of studentList){
+        console.log("Name : ", student.name , ", Age : ", student.age);
+    }
+
+    //2. Function Expression or Anonymous Function
+    let sum = function(n1, n2){
+        return n1+n2;
+    };
+
+    let result1 = sum(2,3);
+
+    console.log("The sum : ", result1);
+
+    //3. Arrow Function
+    let total = (n1, n2) => n1+n2;
+
+    let result2 = total(20,30);
+
+    console.log("Total : ", result2);
+
+
+    // Arrow function with single parameter
+    let result3 = n => n * 3;
+     
+    let result4 =result3(4);
+    console.log("Result 4 : ", result4);
+
+
+
+
+    
+
+
+</script>

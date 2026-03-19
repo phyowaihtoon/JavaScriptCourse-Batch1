@@ -1,0 +1,66 @@
+<script>
+//input A to Z and a to z in name1 and name2 respectively and print the character and its corresponding ASCII value using charAt() and charCodeAt() methods.
+    let name1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let name2 = "abcdefghijklmnopqrstuvwxyz";
+
+    console.log(name1, name1.length);
+    console.log(name2, name2.length);
+
+    for(let i = 0; i < name1.length; i++) {
+        console.log(name1.charAt(i), name1.charCodeAt(i));
+    }
+
+    //create a separator
+    console.log("--------------------------------------------------");
+
+    
+    for(let i = 0; i < name2.length; i++) {
+        console.log(name2.charAt(i), name2.charCodeAt(i));
+    }
+
+
+    let name = "Phyo Wai Htoon";
+
+    //extract the first name, middle name and last name using substring() method and print them separately.
+    let firstName = name.substring(0, 4);
+    let middleName = name.substring(5, 8);
+    let lastName = name.substring(9, 14);
+
+    console.log("First Name:", firstName);
+    console.log("Middle Name:", middleName);
+    console.log("Last Name:", lastName);
+
+    let greet1 = "Hello";
+    let greet2 = "World";
+
+    let greet = greet1.concat(" ", greet2);
+    let g= greet1 + " " + greet2;
+
+    console.log("Using concat():", greet);
+    console.log("Using + operator:", g);
+
+    let str1 = "JavaScript is a versatile language.";
+
+    console.log("Original String:", str1);
+    console.log("Uppercase:", str1.toUpperCase());
+    console.log("Lowercase:", str1.toLowerCase());
+
+
+    let str2 = " Hello  ";
+
+    console.log("Original String Length:", str2.length);
+    let str3 = str2.trimStart();
+    console.log("Trimmed String:", str3);   
+    console.log("Trimmed String Length:", str3.length);
+
+    let str4 = str2.trimEnd();
+    console.log("Trimmed End String:", str4);
+    console.log("Trimmed End String Length:", str4.length);
+
+
+
+
+
+
+
+</script>

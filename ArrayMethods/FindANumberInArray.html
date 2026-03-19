@@ -1,0 +1,63 @@
+<script>
+    //Create an array of numbers
+    const numbers = [1, 2, 3, 4, 5];
+
+    //Find a number in a traditional way using a loop
+    function findNumberTraditional(num) {
+        for (let i = 0; i < numbers.length; i++) {
+            if (numbers[i] === num) {
+                return i; // Return the index of the found number
+            }
+        }
+        return -1;
+    }
+
+
+    const result = findNumberTraditional(3);
+    console.log(`Traditional method: Number found at index ${result}`);
+
+    //Find a number using find method
+    const foundIndex = numbers.findIndex(number => number === 3);
+    console.log(`Find method: Number found at index ${foundIndex}`);
+
+
+    //print a and b
+    // console.log(`Value of a: ${a}`); // This will print 10
+    // console.log(`Value of b: ${b}`); // This will print 20
+
+
+    let a = 10;
+    let name = "John";
+    let student = { name: "Alice", age: 25 };
+
+    console.log(typeof a); // This will print "number"
+    console.log(typeof name); // This will print "string"
+    console.log(typeof student); // This will print "object"
+
+    console.log(student instanceof Object); // This will print true
+    console.log(name instanceof String);
+
+
+    console.log(foo());
+
+    var foo = function () {
+        return "Function Expression";
+    };
+
+    function foo() {
+        return "Function Declaration";
+    }
+
+
+    //Create neted student object
+    const student1 = {
+        name: "Alice",
+        age: 25,
+       
+    };
+
+    console.log(student1.address?.city); 
+    console.log(student1.name);
+
+
+</script>
