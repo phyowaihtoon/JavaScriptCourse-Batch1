@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Multiple Class</title>
+        <style>
+
+            .my-border {
+                border: 3px solid yellow;
+            }
+
+            .my-height {
+                height: 300px;
+            }
+
+            .my-background {
+                background-color: gray;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <div id="myHello" class="my-border my-height my-background">
+            Hello
+        </div>
+
+        <button onclick="sayHello()">Click Hello</button>
+
+
+    </body>
+
+    <script>
+
+        function sayHello(){
+
+          document.getElementById("myHello").classList.remove("my-background");
+
+          let myClassList = document.getElementById("myHello").classList.value;
+
+
+          console.log("Class List :", myClassList);
+        
+        }
+
+
+    </script>
+</html>

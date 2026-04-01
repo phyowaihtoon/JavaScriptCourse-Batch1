@@ -1,0 +1,42 @@
+<script>
+
+    //Create an array of studnets with name and age properties. 
+
+    let students =[
+        {name: "John", age: 20}, // index =0 
+        {name: "Jane", age: 22}, // index =1
+        {name: "Doe", age: 19},  // index =2
+        {name: "Smith", age: 21}  // index =3
+    ];
+
+    function findStudentByAge(age){ //20, 22
+        let student;
+
+        for(let i=0; i < students.length; i++){
+            student = students[i];
+
+            if(age === student.age){
+                break;
+            }else{
+                student = undefined; //clear the student variable if not found
+            }
+
+        }
+
+        return student;
+    }
+
+
+   let student = findStudentByAge(22);
+
+   console.log("Studnet Info : ", student.name , " : ", student.age);
+
+
+   //find student by age using array method
+    function findStudentByAgeUsingArrayMethod(age){
+          return students.find(student => student.age === age);
+    }
+    
+
+    
+</script>

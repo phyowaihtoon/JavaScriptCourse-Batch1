@@ -1,0 +1,61 @@
+<script>
+
+    //Create an array of 10 numbers.
+    let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    //Array Methods
+
+    for(let n of numbers) {
+        console.log(n);
+    }
+
+    //find numbers greater than 5
+    let greaterThan5 = numbers.filter(n => n > 5);
+
+    console.log(greaterThan5);
+
+    //find numbers between 3 and 7
+    let between3And7 = numbers.filter(n => n >= 3 && n <= 7);
+    console.log(between3And7);
+
+
+
+    //Create an array of students with id , name,  and age
+    let students = [
+        {id: 1, name: 'Alice', age: 20},
+        {id: 2, name: 'Bob', age: 22},
+        {id: 3, name: 'Charlie', age: 19},
+        {id: 4, name: 'David', age: 21},
+        {id: 5, name: 'Eve', age: 23}
+    ];
+
+
+
+    function findStudentById(id) {
+        let student = students.find(s => s.id === id);
+        return student;
+    }
+
+
+    console.log(findStudentById(3)); // {id: 3, name: 'Charlie', age: 19}
+
+
+    function findStudentsOlderThan(age) {
+        let olderStudents = students.filter(s => s.age > age);
+        return olderStudents;
+    }
+
+
+    console.log(findStudentsOlderThan(21)); // [{id: 2, name: 'Bob', age: 22}, {id: 5, name: 'Eve', age: 23}]
+
+    
+
+    function findStudentsBetweenAges(minAge, maxAge) {
+        let studentsInRange = students.filter(s => s.age >= minAge && s.age <= maxAge);
+        return studentsInRange;
+    }
+
+    console.log(findStudentsBetweenAges(20, 22)); // [{id: 1, name: 'Alice', age: 20}, {id: 2, name: 'Bob', age: 22}, {id: 4, name: 'David', age: 21}]
+
+
+</script>
