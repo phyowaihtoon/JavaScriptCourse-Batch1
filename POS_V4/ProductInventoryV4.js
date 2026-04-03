@@ -21,7 +21,7 @@ document.getElementById("btn-update").addEventListener("click", updateProduct);
 function addProduct() {
     let productId = document.getElementById("product-id").value;
 
-    if( productId !== "" ){
+    if (productId !== "") {
         return;
     }
 
@@ -66,7 +66,7 @@ function addProduct() {
 
     products[products.length] = product; // Add product object to products array
 
-    autoIncreaseProductId ++;
+    autoIncreaseProductId++;
 
     showProducts(); //function call to show products in table
 
@@ -152,28 +152,23 @@ function showProducts() {
 //Implement a function to delete product from products array and show in table
 function deleteProduct(productId) {
 
-    let index = -1; // to store index of an array
+    let confirmDelete = confirm("Are you sure to delete this product?");
 
-    //Find the index of search product 
-    for (let i = 0; i < products.length; i++) {
-        let productObj = products[i];
+    if (confirmDelete) {
+        //Find index of product to delete
+        let index = products.findIndex(p => p.id === productId);
 
-        if (productObj.id === productId) {
-            index = i;
-            break;
-        }
+        //Remove product from products array
+        products.splice(index, 1);
+
+        //Reload products in table
+        showProducts();
     }
 
-    //Shift Elements
-    for (let i = index; i < products.length - 1; i++) {
-        products[i] = products[i + 1];
-    }
-
-    products.length--;
-
-    //Show Products
-    showProducts();
+    
 }
+
+
 
 function editProduct(productId) {
 
@@ -223,7 +218,7 @@ function updateProduct() {
 
     //Add variables to product object
     let updatedProduct = {
-        id: updatedProductID,
+        id: Number(updatedProductID),
         code: productCode,
         barcode: barcode,
         name: productName,
@@ -237,7 +232,7 @@ function updateProduct() {
         unitOfMeasure: unitOfMeasure
     };
 
-    let productIndex = products.findIndex( p => p.id === Number(updatedProduct.id) );
+    let productIndex = products.findIndex(p => p.id === updatedProduct.id);
 
     products[productIndex] = updatedProduct;
 
