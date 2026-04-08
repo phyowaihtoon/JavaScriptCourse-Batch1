@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Class Exercises</title>
+    <style>
+        .my-border {
+            border: 3px solid black;
+        }
+
+        .my-height {
+            height: 300px;
+        }
+
+        .my-red-background {
+            background-color: red;
+        }
+
+        .my-green-background {
+            background-color: green;
+        }
+
+        .my-blue-background {
+            background-color: blue;
+        }
+
+        .my-yellow-background {
+            background-color: yellow;
+        }
+
+        .my-black-background {
+            background-color: black;
+        }
+
+        .my-gray-background {
+            background-color: gray;
+        }
+
+        .my-purple-background {
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mycolor" class="my-border my-height">
+        Hi
+    </div>
+    <button id="btn-red">Red</button>
+    <button id="btn-green">Green</button>
+    <button id="btn-blue">Blue</button>
+    <button id="btn-yellow">Yellow</button>
+    <button id="btn-black">Black</button>
+    <button id="btn-gray">Gray</button>
+    <button id="btn-purple">purple</button>
+</body>
+<script>
+
+    document.getElementById("btn-red").addEventListener("click", function () {
+        changeColour("my-red-background");
+    } );
+
+    document.getElementById("btn-green").addEventListener("click", () => {
+        changeColour("my-green-background");
+    } );
+
+
+    document.getElementById("btn-blue").addEventListener("click", () => {
+        changeColour("my-blue-background");
+    } );
+
+        document.getElementById("btn-yellow").addEventListener("click", function () {
+        changeColour("my-yellow-background");
+    } );
+
+    document.getElementById("btn-black").addEventListener("click", () => {
+        changeColour("my-black-background");
+    } );
+
+
+    document.getElementById("btn-gray").addEventListener("click", () => {
+        changeColour("my-gray-background");
+    } );
+
+    
+    document.getElementById("btn-purple").addEventListener("click", () => {
+        changeColour("my-purple-background");
+    } );
+
+
+    function changeColour(colourName) {
+
+        let myColourDivElement = document.getElementById("mycolor");
+
+        myColourDivElement.classList.remove("my-purple-background", "my-red-background", "my-green-background", "my-blue-background", "my-yellow-background", "my-black-background", "my-gray-background");
+
+        myColourDivElement.classList.add(colourName);
+
+
+    }
+
+
+</script>
+
+</html>

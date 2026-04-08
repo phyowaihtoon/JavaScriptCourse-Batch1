@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Web Storage API </title>
+
+    <style>
+        input {
+            width: 200px;
+            height: 30px;
+        }
+
+        div {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <input id="input-data">
+    </div>
+
+    <div>
+        <button id="btn-local-storage" onclick="saveInLocalStorage()"> Save Local Storage </button>
+        <button id="btn-session-storage" onclick="saveInSessionStorage()"> Save Session Storage </button>
+        <button id="btn-load-data" onclick="loadData()"> Load Data </button>
+    </div>
+
+    <label>Local Storage</label>
+    <div id="local-storage-data">
+
+    </div>
+
+     <label>Session Storage</label>
+    <div id="session-storage-data">
+
+    </div>
+
+
+</body>
+
+<script>
+
+        function saveInLocalStorage(){
+            let inputData = document.getElementById("input-data").value;
+
+            localStorage.setItem("name", inputData);
+        }
+
+        function saveInSessionStorage(){
+            let inputData = document.getElementById("input-data").value;
+
+            sessionStorage.setItem("name", inputData);
+        }
+
+        function loadData(){
+
+           let localValue = localStorage.getItem("name");
+
+           let sessionValue = sessionStorage.getItem("name");
+
+
+           document.getElementById("local-storage-data").innerText = localValue;
+
+           document.getElementById("session-storage-data").innerText = sessionValue;
+
+        }
+
+</script>
+
+</html>

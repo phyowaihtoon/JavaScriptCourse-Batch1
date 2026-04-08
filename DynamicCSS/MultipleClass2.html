@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Class Exercises</title>
+    <style>
+        .my-border {
+            border: 3px solid black;
+        }
+
+        .my-height {
+            height: 300px;
+        }
+
+        .my-red-background {
+            background-color: red;
+        }
+
+        .my-green-background {
+            background-color: green;
+        }
+
+        .my-blue-background {
+            background-color: blue;
+        }
+        .my-yellow-background{
+            background-color: yellow;
+        }
+        .my-black-background{
+            background-color: black;
+        }
+        .my-gray-background{
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mycolor" class="my-border my-height">
+        Hi
+    </div>
+    <button onclick="changeColour('my-red-background')">Red</button>
+    <button onclick="changeColour('my-green-background')">Green</button>
+    <button onclick="changeColour('my-blue-background')">Blue</button>
+    <button onclick="changeColour('my-yellow-background')">Yellow</button>
+    <button onclick="changeColour('my-black-background')">Black</button>
+    <button onclick="changeColour('my-gray-background')">Gray</button>
+</body>
+<script>
+
+    //Register colour class list
+    let colourClassList = ["my-red-background","my-green-background","my-blue-background","my-yellow-background","my-black-background","my-gray-background"];
+
+
+    function changeColour(colourName){
+
+        document.getElementById("mycolor").classList.add(colourName);
+
+        for (let colour of colourClassList){
+            if( colour !== colourName){
+                document.getElementById("mycolor").classList.remove(colour);
+            }
+        }
+
+    }
+
+   
+
+
+</script>
+
+</html>

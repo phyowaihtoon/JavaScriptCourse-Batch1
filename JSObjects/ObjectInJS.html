@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Object in JS </title>
+</head>
+
+<body>
+
+    <div id="name1"></div>
+    <div id="name2"></div>
+
+    <div id="name3"></div>
+    <div id="name4"></div>
+
+
+
+
+    <script>
+
+        let name1 = "Mg Mg";
+        let name2 = "Ko Ko";
+
+        document.getElementById("name1").innerText = name1;
+        document.getElementById("name2").innerText = name2;
+       
+        //Object
+        // curly brace { }
+        // bracket [ ]
+        // Object has properties and functions/methods
+        let student1 = {
+            name: "Hla Hla",
+            age: 20,
+            nrc : "1232323",
+            address : "Yangon"
+        };
+
+        let student2 = {
+            name: "Mya Mya",
+            age: 25,
+            nrc : "885555",
+            address : "Mandaly"
+        };
+
+        //dot operator
+        document.getElementById("name3").innerText = student1.age;
+        document.getElementById("name4").innerText = student2.address;
+
+       
+       
+
+    </script>
+
+</body>
+
+</html>

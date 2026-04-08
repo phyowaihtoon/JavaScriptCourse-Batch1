@@ -1,0 +1,47 @@
+<script>
+
+    //Nested Object
+    const student = {
+        name : "Hla Hla",
+        age : 30,
+        address : {
+            currentAddress: "Yangon",
+            permanentAddress : "Salin"
+        },
+        phone : {
+            handPhone : "0945945845",
+            homePhone : "013983983"
+        },
+        subjects : ["Maths","Physics","Myanmar","English"]
+    };
+
+    student.name = "Phyo Gyi";
+    student.address.permanentAddress = "Sinbyugyun";
+    student.grade =11;
+
+    //Accessing Object properties through dot notation
+    console.log("Accessing Object properties through dot notation")
+    console.log(student.name);
+    console.log("Current Address : ",student.address.currentAddress);
+    console.log("Permanent Address : ",student.address.permanentAddress);
+    console.log("Hand Phone : ",student.phone.handPhone);
+    console.log("Home Phone : ",student.phone.homePhone);
+    console.log("Grade : ",student.grade);
+    console.log("Subjects : ", student.subjects[0], student.subjects[1], student.subjects[2],student.subjects[3])
+
+    console.log("..............................................")
+    //Accessing Object properties through bracket notation
+    console.log("Accessing Object properties through bracket notation")
+
+    console.log(student["name"]);
+    console.log(student["age"]);
+    console.log("Current Address : ",student["address"]["currentAddress"]);
+    console.log("Permanent Address : ",student["address"]["permanentAddress"]);
+    console.log("Hand Phone : ",student["phone"].handPhone);
+    console.log("Home Phone : ",student["phone"].homePhone);
+    console.log("Grade : ",student["grade"]);
+    console.log("Subjects : ", student["subjects"][0], student["subjects"][1], student["subjects"][2],student.subjects[3])
+
+    
+
+</script>

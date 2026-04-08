@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Registration</title>
+    </head>
+    <body>
+        <label>Name :</label>
+        <input id="studentName">
+        <br><br>
+        <label>Age :</label>
+        <input id="studentAge">
+        <br><br>
+        <label>NRC :</label>
+        <input id="nrc">
+        <br><br>
+        <label>Student ID :</label>
+        <input id="stuid">
+        <br><br>
+        <label>Address :</label>
+        <input id="address">
+        <br><br>
+
+        <button onclick="submit()">Submit</button>
+        <button onclick="cleardata()">Clear</button>
+
+        <script>
+            let student1 = {
+                name : "Ko Ko",
+                age : "21",
+                nrc : "234546",
+                stuid : "875392",
+                address : "Hlaing",
+
+
+            }
+
+
+            function submit(){
+
+                console.log("hello")
+
+                document.getElementById("studentName").value=student1.name;
+                document.getElementById("studentAge").value=student1.age;
+                document.getElementById("nrc").value=student1.nrc;
+                document.getElementById("stuid").value=student1.stuid;
+                document.getElementById("address").value=student1.address;
+
+
+
+            }
+
+             function cleardata(){
+
+                console.log("hello")
+
+                document.getElementById("studentName").value="";
+                document.getElementById("studentAge").value="";
+                document.getElementById("nrc").value="";
+                document.getElementById("stuid").value="";
+                document.getElementById("address").value="";
+
+
+
+            }
+
+        </script>
+    </body>
+</html>
