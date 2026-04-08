@@ -64,7 +64,8 @@ function addProduct() {
         return; //Exit from program
     }
 
-    products[products.length] = product; // Add product object to products array
+
+    products.push(product); //Add product object to products array
 
     autoIncreaseProductId++;
 

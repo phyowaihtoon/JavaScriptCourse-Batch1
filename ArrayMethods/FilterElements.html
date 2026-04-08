@@ -1,0 +1,18 @@
+<script>
+
+
+     //Create an array with five product objects
+    let products = [
+        { id: 1, code: "P001", barcode: "1234567890123", name: "Product 1", categoryId: 1, supplier: "Supplier 1", expiryDate: "2024-12-31", status: "Active", costPrice: 8.00, sellingPrice: 15.00, quantity: 100, unitOfMeasure: "Piece" },
+        { id: 2, code: "P002", barcode: "1234567890124", name: "Product 2", categoryId: 2, supplier: "Supplier 2", expiryDate: "2025-01-31", status: "Active", costPrice: 20.00, sellingPrice: 30.00, quantity: 50, unitOfMeasure: "Piece" },
+        { id: 3, code: "P003", barcode: "1234567890125", name: "Product 3", categoryId: 3, supplier: "Supplier 3", expiryDate: "2024-11-30", status: "Inactive", costPrice: 15.00, sellingPrice: 25.00, quantity: 200, unitOfMeasure: "Piece" },
+        { id: 4, code: "P004", barcode: "1234567890126", name: "Product 4", categoryId: 4, supplier: "Supplier 4", expiryDate: "2025-02-28", status: "Active", costPrice: 5.00, sellingPrice: 10.00, quantity: 150, unitOfMeasure: "Piece" },
+        { id: 5, code: "P005", barcode: "1234567890127", name: "Product 5", categoryId: 5, supplier: "Supplier 5", expiryDate: "2024-10-31", status: "Inactive", costPrice: 8.00, sellingPrice: 12.00, quantity: 80, unitOfMeasure: "Piece" }
+    ];
+
+    //Filter elements
+    let result = products.filter( p => p.status === "Active" && p.costPrice === 5 );
+
+    console.log("Result : ", result);
+
+</script>
