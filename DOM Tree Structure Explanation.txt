@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Lesson</title>
+    </head>
+
+    <body>
+        <h1>Welcome to DOM</h1>
+        <div style="background-color: blue;color:white" id="my-div">
+            I am here to meet you.
+        </div>
+    </body>
+</html>
+
+		Process of converting original html elements to DOM tree structure
+			
+					DOM - Document Object Model
+
+
+
+						document
+
+						Root Element
+						<html>
+
+		<head>								<body>
+		
+		<title>						<h1>			<div>
+		
+		DOM Lesson			Welcome to DOM				attribute -> style : background-color: blue;color:white
+														
+														I am here to meet you.
+														
+														
+document = {
+	
+	HTMLElement : {
+		
+		HEADElement : {
+			TitleElement :  {
+				innerText : "DOM Lesson"
+			}
+		},
+		
+		BodyElement : {
+			H1Element : {},
+			
+			DIVElement : {
+			attribute : {
+				sytle : {
+					backgroundColor : "blue",
+					color: "white"
+				},
+				id : "my-div"
+			},
+			innerText : "I am here to meet you."
+		}
+		
+		}
+	}
+
+
+
+
+
+		
+
+};
+
+

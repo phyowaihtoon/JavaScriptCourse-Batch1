@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DOM Lesson</title>
+</head>
+
+<body>
+    <h1>Welcome to DOM</h1>
+    <div style="background-color: blue;color:white" id="my-div">
+        I am here to meet you.
+    </div>
+
+    <button onclick="changeContent()"> Change </button>
+
+
+    <script>
+
+
+        function changeContent() {
+
+            document.getElementById("my-div").innerText = "Hello";
+
+            //document.getElementById("my-div").attributes["style"].value = "background-color: red;color:white";
+
+            //Use alternative way to change style
+            document.getElementById("my-div").style.backgroundColor = "gray";
+
+        }
+
+
+    </script>
+</body>
+
+</html>
