@@ -17,6 +17,7 @@ Skill: Comparison logic
 6. Palindrome Check
 Skill: Symmetry thinking
 e.g. "madam" is a palindrome because it reads the same backward and forward.
+e.g civic, radar, level, madam, and refer
 
 7. Sum of Digits
 Skill: Decomposition
@@ -41,3 +42,18 @@ Each number is the sum of the previous two:
 
 Rule:
 F(n) = F(n-1) + F(n-2)
+
+13. BMI Calculator: Calculate Body Mass Index (weight / (height * height)) and categorize it as underweight, normal, overweight, or obese.
+    # Unit of Weight : lbs
+    # Unit of Height : feet and inches
+    # BMI Categories:
+        - Underweight: BMI < 18.5
+        - Normal weight: BMI >= 18.5 && BMI < 24.9
+        - Overweight: BMI >= 25 && BMI < 29.9
+        - Obese: BMI >= 30
+    # Formula : BMI = weight / (height * height)
+    # Example: If a person weighs 150 lbs and is 5 feet 6 inches tall, the BMI would be calculated as follows:
+    # Convert height to inches: 5 feet 6 inches =  (5 * 12) + 6 = 66 inches
+    # Convert height to meters: 66 inches * 0.0254 = 1.6764 meters
+    # Convert weight to kilograms: 150 lbs * 0.453592 = 68.0388 kg
+    # Calculate BMI: BMI = 68.0388 / (1.6764 * 1.6764) = 24.2

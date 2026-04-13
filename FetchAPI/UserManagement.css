@@ -19,10 +19,22 @@ button {
     margin-left: 20px;
     color: white;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+#btn-load {
+    background-color: rgb(43, 43, 228);
+    width: 100px;
 }
 
 #btn-add {
     background-color: rgb(43, 43, 228);
+}
+
+.btn-disable {
+    background-color: rgb(43, 43, 228);
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 #btn-update {

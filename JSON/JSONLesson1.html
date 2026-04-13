@@ -1,0 +1,29 @@
+<script>
+
+// create a person JSON string text
+var person = '{"name": "John", "age": 30, "city": "New York"}';
+var name = 'Mg Mg';
+
+console.log("Original JSON string");
+console.log(person.name);
+console.log(person);
+
+
+//Convert JSON to JS object
+let personObj = JSON.parse(person);
+personObj.age = 25; //Update object data
+
+console.log("After converting to JS object");
+console.log(personObj.name);
+console.log(personObj);
+
+
+//Convert JS object to JSON
+let jsonString = JSON.stringify(personObj);
+console.log("After converting to JSON");
+console.log(jsonString.name);
+console.log(jsonString);
+
+
+
+</script>

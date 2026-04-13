@@ -1,0 +1,15 @@
+<script>
+
+    let url = "https://jsonplaceholder.typicode.com/users";
+
+
+    fetch(url) //send http request to server
+    .then( response => response.json() ) // Recieving response from server , and convert it to JS object
+    .then( userList => {
+        for(let user of userList){
+            console.log("ID : ", user.id, ", name : ", user.name);
+        }
+    } )
+    .catch ( error => console.log("Cannot connect to API server. Please, check your network connection"));
+
+</script>

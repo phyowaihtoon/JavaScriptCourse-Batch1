@@ -1,0 +1,33 @@
+<script>
+
+
+    let persons =[
+        {name: "John", age: 30, city: "New York"},
+        {name: "David", age: 20, city: "New York"},
+        {name: "Jone", age: 10, city: "New York"},
+        {name: "Cherry", age: 25, city: "New York"},
+        {name: "Muyar", age: 30, city: "Yangon"}
+    ];
+
+    console.log("Original Persons Array Object");
+    console.log(persons);
+    console.log(persons[4].name);
+
+
+    //Convert Array to JSON
+    let jsonArray = JSON.stringify(persons);
+    console.log("After converting to JSON");
+    console.log(jsonArray);
+    console.log(jsonArray[4].name);
+
+    let originalJSONstring = '[{"name":"John","age":30,"city":"New York"},{"name":"David","age":20,"city":"New York"},{"name":"Jone","age":10,"city":"New York"},{"name":"Cherry","age":25,"city":"New York"},{"name":"Hla Hla","age":30,"city":"Yangon"}]';
+
+    //Convert to JS Object
+    let personArray = JSON.parse(originalJSONstring);
+    console.log("After converting to JS Array");
+    console.log(personArray);
+    console.log(personArray[4].name);
+
+
+
+</script>
