@@ -1,5 +1,5 @@
-<mxfile host="app.diagrams.net" pages="9">
-  <diagram name="DOM" id="AWi2PZ7SZuILrH6djtD5">
+<mxfile host="app.diagrams.net" pages="10">
+  <diagram name="Load A Web Page" id="AWi2PZ7SZuILrH6djtD5">
     <mxGraphModel dx="774" dy="451" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
@@ -65,6 +65,74 @@
         <mxCell id="ZZ21DuhLnhMCgTyL9gth-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1;fontSize=16;" value="How browser loads a web page ?" vertex="1">
           <mxGeometry height="60" width="280" x="260" y="70" as="geometry" />
         </mxCell>
+        <mxCell id="awZxS7ET8TVJz_MW0yPV-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="e.g using innerHTML or innerText" vertex="1">
+          <mxGeometry height="30" width="209" x="273" y="160" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="rwROO8wFxvCyzwUDNZO9" name="DOM">
+    <mxGraphModel dx="774" dy="451" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="HJrZz5byUGonJHK_l_nY-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=18;fontStyle=5" value="Document Object Model" vertex="1">
+          <mxGeometry height="30" width="210" x="220" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="HJrZz5byUGonJHK_l_nY-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1;fontSize=13;" value="Process of converting original HTML elements to DOM Tree Strucuture" vertex="1">
+          <mxGeometry height="30" width="440" x="120" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="HJrZz5byUGonJHK_l_nY-13" edge="1" parent="1" source="HJrZz5byUGonJHK_l_nY-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="HJrZz5byUGonJHK_l_nY-4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HJrZz5byUGonJHK_l_nY-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="document" vertex="1">
+          <mxGeometry height="30" width="120" x="255" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="HJrZz5byUGonJHK_l_nY-14" edge="1" parent="1" source="HJrZz5byUGonJHK_l_nY-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="HJrZz5byUGonJHK_l_nY-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HJrZz5byUGonJHK_l_nY-15" edge="1" parent="1" source="HJrZz5byUGonJHK_l_nY-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="HJrZz5byUGonJHK_l_nY-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HJrZz5byUGonJHK_l_nY-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="&lt;div&gt;Root Node&lt;/div&gt;&amp;lt;html&amp;gt;" vertex="1">
+          <mxGeometry height="30" width="120" x="255" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="HJrZz5byUGonJHK_l_nY-16" edge="1" parent="1" source="HJrZz5byUGonJHK_l_nY-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="HJrZz5byUGonJHK_l_nY-12" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HJrZz5byUGonJHK_l_nY-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="&amp;lt;head&amp;gt;" vertex="1">
+          <mxGeometry height="30" width="120" x="80" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="HJrZz5byUGonJHK_l_nY-17" edge="1" parent="1" source="HJrZz5byUGonJHK_l_nY-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="HJrZz5byUGonJHK_l_nY-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HJrZz5byUGonJHK_l_nY-18" edge="1" parent="1" source="HJrZz5byUGonJHK_l_nY-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="HJrZz5byUGonJHK_l_nY-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HJrZz5byUGonJHK_l_nY-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="&amp;lt;body&amp;gt;" vertex="1">
+          <mxGeometry height="30" width="120" x="440" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="HJrZz5byUGonJHK_l_nY-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="&amp;lt;title&amp;gt;" vertex="1">
+          <mxGeometry height="30" width="120" x="80" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="HJrZz5byUGonJHK_l_nY-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="&amp;lt;h1&amp;gt;" vertex="1">
+          <mxGeometry height="30" width="120" x="360" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="HJrZz5byUGonJHK_l_nY-19" edge="1" parent="1" source="HJrZz5byUGonJHK_l_nY-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="HJrZz5byUGonJHK_l_nY-11" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HJrZz5byUGonJHK_l_nY-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="&amp;lt;div&amp;gt;" vertex="1">
+          <mxGeometry height="30" width="120" x="560" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="HJrZz5byUGonJHK_l_nY-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Welcome to Web Page" vertex="1">
+          <mxGeometry height="30" width="130" x="555" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="HJrZz5byUGonJHK_l_nY-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Home" vertex="1">
+          <mxGeometry height="30" width="130" x="75" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="HJrZz5byUGonJHK_l_nY-21" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=3;fontSize=14;" value="In DOM, each rectangle is called a Node" vertex="1">
+          <mxGeometry height="30" width="295" x="65" y="460" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
@@ -79,7 +147,7 @@
         <mxCell id="8McomnP4HtPVTDzYhv42-17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" value="" vertex="1">
           <mxGeometry height="256" width="167" x="133" y="143" as="geometry" />
         </mxCell>
-        <mxCell id="8McomnP4HtPVTDzYhv42-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=14;" value="&lt;ul&gt;&lt;li&gt;&lt;b&gt;Client&lt;/b&gt; - System that requests data from another system&lt;/li&gt;&lt;li&gt;&lt;b&gt;Server&lt;/b&gt; - System that provides data to clients&lt;/li&gt;&lt;/ul&gt;" vertex="1">
+        <mxCell id="8McomnP4HtPVTDzYhv42-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=14;" value="&lt;ul&gt;&lt;li&gt;&lt;b&gt;Client&lt;/b&gt; - System that requests data from server&lt;/li&gt;&lt;li&gt;&lt;b&gt;Server&lt;/b&gt; - System that responds data to clients&lt;/li&gt;&lt;/ul&gt;" vertex="1">
           <mxGeometry height="58" width="422" x="209" y="54" as="geometry" />
         </mxCell>
         <mxCell id="8McomnP4HtPVTDzYhv42-16" connectable="0" parent="1" style="group" value="" vertex="1">
@@ -524,7 +592,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="8N4O2hiEQBIGWAiuCCD-" name="JS Fetch API">
-    <mxGraphModel dx="774" dy="451" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="911" dy="531" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -554,6 +622,12 @@
         </mxCell>
         <mxCell id="ni-HQF6fzwf_cx5Zkhig-9" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontStyle=1;fontSize=13;" value="HTTP GET Request" vertex="1">
           <mxGeometry height="30" width="127" x="111" y="112" as="geometry" />
+        </mxCell>
+        <mxCell id="72u0uqD1D8jxeenJo_uA-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div style=&quot;text-align: start;&quot;&gt;&lt;span style=&quot;background-color: transparent; font-size: 20px;&quot;&gt;&lt;font color=&quot;#001d35&quot; face=&quot;Arial, Noto Sans Myanmar UI, sans-serif&quot;&gt;&lt;b&gt;3. Error Handling in Async/Await&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="352" x="84" y="569" as="geometry" />
+        </mxCell>
+        <mxCell id="72u0uqD1D8jxeenJo_uA-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;fillColor=#fad7ac;strokeColor=#b46504;fontSize=14;" value="&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; padding: 0px;&quot;&gt;&lt;div class=&quot;cm-line&quot;&gt;&lt;div class=&quot;cm-line&quot;&gt;async function load() {&lt;/div&gt;&lt;div class=&quot;cm-line&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;span style=&quot;background-color: transparent;&quot;&gt;&amp;nbsp; try {&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;cm-line&quot;&gt;&lt;span style=&quot;white-space: normal;&quot;&gt;&lt;span style=&quot;white-space:pre&quot;&gt;&#x9;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;cm-line&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; const res = await fetch(URL);&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;cm-line&quot;&gt;&lt;span style=&quot;white-space: normal;&quot;&gt;&lt;span style=&quot;white-space:pre&quot;&gt;&#x9;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;cm-line&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; const data= await res.json();&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;cm-line&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div class=&quot;cm-line&quot;&gt;&amp;nbsp; &amp;nbsp; } catch (error) {&lt;/div&gt;&lt;div class=&quot;cm-line&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;cm-line&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;alert(&quot;Network connection is not available.&quot;);&lt;/div&gt;&lt;div class=&quot;cm-line&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div class=&quot;cm-line&quot;&gt; &lt;span class=&quot;ͼ6&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// ❌ This WON&#39;T catch 404 or 500&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;cm-line&quot;&gt;&amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div class=&quot;cm-line&quot;&gt;}&lt;/div&gt;&lt;/div&gt;&lt;/blockquote&gt;" vertex="1">
+          <mxGeometry height="243" width="487" x="111" y="602" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

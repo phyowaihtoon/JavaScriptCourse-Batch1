@@ -7,17 +7,31 @@ async function showUsers() {
 
     let usersURL = "https://jsonplaceholder.typicode.com/users";
 
-    let response = await fetch(usersURL); //Send HTTP GET request to usersURL and get response
-    let users = await response.json(); //Convert response to JSON
+    let response;
+    let users;
 
+    try {
+
+        response = await fetch(usersURL); //Send HTTP GET request to usersURL and get response
+        users = await response.json(); //Convert response to JSON
+
+        if(response.status === 404){
+            alert("Invalid URL");
+        }
+
+    } catch (error) {
+        alert("Network connection is not available!");
+    }
+
+    console.log(response.ok); //Show response ok in console
     console.log(response.status); //Show response status in console
 
     let tableBody = document.getElementById("table-body");
 
     tableBody.innerHTML = ""; //Clear table body before showing users
 
-    users.forEach( user => {
-         let row = `<tr>
+    users.forEach(user => {
+        let row = `<tr>
                     <td>${user.id}</td>
                     <td>${user.name}</td>
                     <td>${user.email}</td>
