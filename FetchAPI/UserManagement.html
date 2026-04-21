@@ -11,8 +11,10 @@
 <body>
     <h1>User Management</h1>
 
-
-    <div id="button-container">
+    <!--Search Box -->
+    <div>
+        <input id="search-name">
+        <button id="btn-search">Search</button>
         <button id="btn-load"> Load Users </button>
     </div>
 
@@ -31,6 +33,11 @@
             </tbody>
         </table>
     </div>
+
+
+    <div id="loading" style="display: none; font-size:20pt"> Loading... </div>
+
+    <div id="error" style="display: none;font-size: 20pt; color: red;"></div>
 
 
     <script src="UserManagement.js"></script>

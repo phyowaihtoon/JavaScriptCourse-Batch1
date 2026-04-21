@@ -1,9 +1,12 @@
 
 document.getElementById("btn-load").addEventListener("click", showUsers);
+document.getElementById("btn-search").addEventListener("click", searchUser);
 
 //Name function to show users in table
 //Use for loop to loop through users array and show in table
 async function showUsers() {
+
+    document.getElementById("loading").style.display = "block";
 
     let usersURL = "https://jsonplaceholder.typicode.com/users";
 
@@ -15,12 +18,17 @@ async function showUsers() {
         response = await fetch(usersURL); //Send HTTP GET request to usersURL and get response
         users = await response.json(); //Convert response to JSON
 
-        if(response.status === 404){
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("error").style.display = "none";
+
+        if (response.status === 404) {
             alert("Invalid URL");
         }
 
     } catch (error) {
-        alert("Network connection is not available!");
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("error").style.display = "block";
+        document.getElementById("error").innerText = "Faied to connect server. Please, check your connection";
     }
 
     console.log(response.ok); //Show response ok in console
@@ -41,5 +49,52 @@ async function showUsers() {
 
         tableBody.innerHTML = tableBody.innerHTML + row;
     });
+
+}
+
+
+//Search User
+async function searchUser() {
+
+    document.getElementById("loading").style.display = "block";
+
+    let userName = document.getElementById("search-name").value;
+
+    //Interpolation
+    //let url = `https://jsonplaceholder.typicode.com/users?name=${userName}`;
+
+    //Concatenation
+    let url = "https://jsonplaceholder.typicode.com/users?name=" + userName;
+
+    let tableBody = document.getElementById("table-body");
+    tableBody.innerHTML = "";
+
+    try {
+        let res = await fetch(url)
+        let users = await res.json();
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("error").style.display = "none";
+
+        users.forEach(user => {
+            let row = `
+                <tr>
+                    <td>${user.id}</td>
+                    <td>${user.name}</td>
+                    <td>${user.email}</td>
+                    <td>${user.phone}</td>
+                    <td>${user.website}</td>
+                </tr>
+                `;
+
+            tableBody.innerHTML += row;
+        });
+
+    } catch (error) {
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("error").style.display = "block";
+        document.getElementById("error").innerText = "Faied to connect server. Please, check your connection";
+    }
+
+
 
 }
