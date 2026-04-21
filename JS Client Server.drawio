@@ -220,23 +220,23 @@
     </mxGraphModel>
   </diagram>
   <diagram id="nKE21FICohNNpMNpI3St" name="Client vs Server Example">
-    <mxGraphModel dx="774" dy="451" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="860" dy="501" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="bXQzJLDOxLe1Pgfx-QMz-1" parent="1" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/web_server.svg;" value="" vertex="1">
           <mxGeometry height="125" width="100" x="322" y="162" as="geometry" />
         </mxCell>
-        <mxCell id="bXQzJLDOxLe1Pgfx-QMz-2" parent="1" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.client;" value="Client 1" vertex="1">
+        <mxCell id="bXQzJLDOxLe1Pgfx-QMz-2" parent="1" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=1;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.client;" value="Client 1" vertex="1">
           <mxGeometry height="76" width="78" x="39" y="211" as="geometry" />
         </mxCell>
-        <mxCell id="bXQzJLDOxLe1Pgfx-QMz-3" parent="1" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.mobile_client;" value="Client 2" vertex="1">
+        <mxCell id="bXQzJLDOxLe1Pgfx-QMz-3" parent="1" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=1;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.mobile_client;" value="Client 2" vertex="1">
           <mxGeometry height="78" width="41" x="322" as="geometry" />
         </mxCell>
-        <mxCell id="bXQzJLDOxLe1Pgfx-QMz-4" parent="1" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/laptop_client.svg;" value="Client 3" vertex="1">
+        <mxCell id="bXQzJLDOxLe1Pgfx-QMz-4" parent="1" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/laptop_client.svg;fontStyle=1" value="Client 3" vertex="1">
           <mxGeometry height="77.56" width="69.8" x="677" y="196" as="geometry" />
         </mxCell>
-        <mxCell id="bXQzJLDOxLe1Pgfx-QMz-5" parent="1" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/tablet_pc.svg;" value="Client 4" vertex="1">
+        <mxCell id="bXQzJLDOxLe1Pgfx-QMz-5" parent="1" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/tablet_pc.svg;fontStyle=1" value="Client 4" vertex="1">
           <mxGeometry height="78.77" width="57.5" x="293" y="377" as="geometry" />
         </mxCell>
         <UserObject label="https://www.youtube.com/" link="https://www.draw.io" id="bXQzJLDOxLe1Pgfx-QMz-8">
@@ -296,7 +296,7 @@
           <mxGeometry height="19" width="88" x="275" y="325" as="geometry" />
         </mxCell>
         <mxCell id="bXQzJLDOxLe1Pgfx-QMz-26" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="HTTP Request" vertex="1">
-          <mxGeometry height="19" width="88" x="348" y="111" as="geometry" />
+          <mxGeometry height="19" width="88" x="394" y="111" as="geometry" />
         </mxCell>
         <mxCell id="bXQzJLDOxLe1Pgfx-QMz-27" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="HTTP Request" vertex="1">
           <mxGeometry height="19" width="88" x="497.5" y="261" as="geometry" />
@@ -335,6 +335,19 @@
         </mxCell>
         <mxCell id="Qk0wN8NV4I245iJkH6us-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="HTTP Response" vertex="1">
           <mxGeometry height="19" width="103" x="143" y="225.28" as="geometry" />
+        </mxCell>
+        <mxCell id="4vvbedHNG-NIQHnu_ILe-1" edge="1" parent="1" source="bXQzJLDOxLe1Pgfx-QMz-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=1 1;" target="bXQzJLDOxLe1Pgfx-QMz-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="372" y="101" />
+              <mxPoint x="343" y="101" />
+            </Array>
+            <mxPoint x="439" y="101" as="sourcePoint" />
+            <mxPoint x="234" y="101" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4vvbedHNG-NIQHnu_ILe-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="HTTP Response" vertex="1">
+          <mxGeometry height="19" width="104" x="267" y="111" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
@@ -514,7 +527,7 @@
         <mxCell id="mduaXfzl-q0-lafof-7G-10" parent="1" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.weblogos.chrome" value="" vertex="1">
           <mxGeometry height="30" width="29" x="146" y="194" as="geometry" />
         </mxCell>
-        <mxCell id="mduaXfzl-q0-lafof-7G-15" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;" value="API Gateway" vertex="1">
+        <mxCell id="mduaXfzl-q0-lafof-7G-15" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;" value="API Endpoints" vertex="1">
           <mxGeometry height="57" width="120" x="395" y="170" as="geometry" />
         </mxCell>
         <mxCell id="mduaXfzl-q0-lafof-7G-16" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;Web Server" vertex="1">
@@ -544,49 +557,120 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="vNWquG0mMUlKBeiBP3u4" name="Sample Real API">
+  <diagram id="vNWquG0mMUlKBeiBP3u4" name="Real API URLs">
     <mxGraphModel dx="774" dy="451" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="-vwqEeSHXXEbMAfl3anB-2" parent="1" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=none;strokeWidth=1;fillColor=none;fontColor=#0085FC;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=0;fontStyle=0;fontSize=16;spacing=5;" value="https://jsonplaceholder.typicode.com/users" vertex="1">
-          <mxGeometry height="41" width="371" x="160" y="26" as="geometry" />
+          <mxGeometry height="41" width="371" x="148" y="24" as="geometry" />
         </mxCell>
-        <mxCell id="-vwqEeSHXXEbMAfl3anB-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontStyle=1;fontSize=15;" value="Simple Idea :" vertex="1">
-          <mxGeometry height="30" width="98" x="37" y="284" as="geometry" />
-        </mxCell>
-        <mxCell id="-vwqEeSHXXEbMAfl3anB-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=14;" value="API is a messenger between client and server" vertex="1">
-          <mxGeometry height="30" width="342" x="156" y="320" as="geometry" />
-        </mxCell>
-        <mxCell id="-vwqEeSHXXEbMAfl3anB-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=14;" value="&lt;b&gt;https&lt;/b&gt; - protocol (secure)" vertex="1">
-          <mxGeometry height="30" width="230" x="166" y="62" as="geometry" />
+        <mxCell id="-vwqEeSHXXEbMAfl3anB-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=14;" value="&lt;b&gt;protocol&lt;/b&gt; (secure) - https" vertex="1">
+          <mxGeometry height="30" width="230" x="154" y="60" as="geometry" />
         </mxCell>
         <mxCell id="-vwqEeSHXXEbMAfl3anB-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=14;" value="&lt;b&gt;DNS&lt;/b&gt; -&amp;nbsp;jsonplaceholder.typicode.com" vertex="1">
-          <mxGeometry height="30" width="243" x="166" y="86" as="geometry" />
+          <mxGeometry height="30" width="243" x="154" y="84" as="geometry" />
         </mxCell>
-        <mxCell id="-vwqEeSHXXEbMAfl3anB-9" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=14;" value="&lt;b&gt;Resource Path&lt;/b&gt; - /users" vertex="1">
-          <mxGeometry height="30" width="208" x="166" y="108" as="geometry" />
+        <mxCell id="-vwqEeSHXXEbMAfl3anB-9" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=14;" value="&lt;b&gt;Resource Path or Endpoint&lt;/b&gt; - /users" vertex="1">
+          <mxGeometry height="30" width="249" x="154" y="106" as="geometry" />
         </mxCell>
         <mxCell id="vdyp0KYOSfmr5PxIWnuh-1" parent="1" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=none;strokeWidth=1;fillColor=none;fontColor=#0085FC;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=0;fontStyle=0;fontSize=16;spacing=5;" value="http://127.0.0.1:5500/JSON/JSONLesson1.html" vertex="1">
-          <mxGeometry height="41" width="371" x="162" y="138" as="geometry" />
+          <mxGeometry height="41" width="371" x="150" y="496" as="geometry" />
         </mxCell>
-        <mxCell id="vdyp0KYOSfmr5PxIWnuh-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=14;" value="&lt;b&gt;http&lt;/b&gt;&amp;nbsp;- protocol" vertex="1">
-          <mxGeometry height="30" width="230" x="168" y="174" as="geometry" />
+        <mxCell id="vdyp0KYOSfmr5PxIWnuh-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=14;" value="&lt;b&gt;protocol&lt;/b&gt; - http" vertex="1">
+          <mxGeometry height="30" width="230" x="156" y="532" as="geometry" />
         </mxCell>
         <mxCell id="vdyp0KYOSfmr5PxIWnuh-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=14;" value="&lt;b&gt;IP Address&lt;/b&gt; -&amp;nbsp;127.0.0.1" vertex="1">
-          <mxGeometry height="30" width="243" x="168" y="198" as="geometry" />
+          <mxGeometry height="30" width="243" x="156" y="556" as="geometry" />
         </mxCell>
         <mxCell id="vdyp0KYOSfmr5PxIWnuh-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=14;" value="&lt;b&gt;Port&lt;/b&gt; - 5500" vertex="1">
-          <mxGeometry height="30" width="208" x="168" y="220" as="geometry" />
+          <mxGeometry height="30" width="208" x="156" y="578" as="geometry" />
         </mxCell>
-        <mxCell id="vdyp0KYOSfmr5PxIWnuh-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=14;" value="&lt;b&gt;Resource Path&lt;/b&gt; -&amp;nbsp;/JSON/JSONLesson1.html" vertex="1">
-          <mxGeometry height="30" width="294" x="170" y="242" as="geometry" />
+        <mxCell id="vdyp0KYOSfmr5PxIWnuh-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=14;" value="&lt;b&gt;Resource Path or Endpoint&lt;/b&gt; -&amp;nbsp;/JSON/JSONLesson1.html" vertex="1">
+          <mxGeometry height="30" width="366" x="154" y="600" as="geometry" />
         </mxCell>
         <mxCell id="vdyp0KYOSfmr5PxIWnuh-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontStyle=1;fontSize=16;" value="API/Web URL&amp;nbsp; :" vertex="1">
-          <mxGeometry height="30" width="119" x="37" y="143.5" as="geometry" />
+          <mxGeometry height="30" width="119" x="25" y="501.5" as="geometry" />
         </mxCell>
         <mxCell id="vdyp0KYOSfmr5PxIWnuh-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontStyle=1;fontSize=16;" value="API/Web URL&amp;nbsp; :" vertex="1">
-          <mxGeometry height="30" width="119" x="37" y="32" as="geometry" />
+          <mxGeometry height="30" width="119" x="25" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jhiYQdqZbxFGPQ9h7KPZ-1" parent="1" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=none;strokeWidth=1;fillColor=none;fontColor=#0085FC;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=0;fontStyle=0;fontSize=16;spacing=5;" value="https://jsonplaceholder.typicode.com/users?username=Bret" vertex="1">
+          <mxGeometry height="41" width="446" x="153" y="142" as="geometry" />
+        </mxCell>
+        <mxCell id="jhiYQdqZbxFGPQ9h7KPZ-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=14;" value="&lt;b&gt;protocol&lt;/b&gt; (secure) - https" vertex="1">
+          <mxGeometry height="30" width="230" x="154" y="177.5" as="geometry" />
+        </mxCell>
+        <mxCell id="jhiYQdqZbxFGPQ9h7KPZ-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=14;" value="&lt;b&gt;DNS&lt;/b&gt; -&amp;nbsp;jsonplaceholder.typicode.com" vertex="1">
+          <mxGeometry height="30" width="243" x="154" y="201.5" as="geometry" />
+        </mxCell>
+        <mxCell id="jhiYQdqZbxFGPQ9h7KPZ-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=14;" value="&lt;b&gt;Resource Path or Endpoint&lt;/b&gt; - /users" vertex="1">
+          <mxGeometry height="30" width="249" x="154" y="223.5" as="geometry" />
+        </mxCell>
+        <mxCell id="jhiYQdqZbxFGPQ9h7KPZ-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontStyle=1;fontSize=16;" value="API/Web URL&amp;nbsp; :" vertex="1">
+          <mxGeometry height="30" width="119" x="25" y="147.5" as="geometry" />
+        </mxCell>
+        <mxCell id="jhiYQdqZbxFGPQ9h7KPZ-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=14;" value="&lt;b&gt;Query Parameter&lt;/b&gt; -&amp;nbsp;?username=Bret" vertex="1">
+          <mxGeometry height="30" width="242" x="153" y="249" as="geometry" />
+        </mxCell>
+        <mxCell id="jhiYQdqZbxFGPQ9h7KPZ-9" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;exitX=0.68;exitY=1.028;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.966;entryY=1.012;entryDx=0;entryDy=0;entryPerimeter=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="461.28" y="176.14800000000002" as="sourcePoint" />
+            <mxPoint x="588.836" y="175.49199999999996" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jhiYQdqZbxFGPQ9h7KPZ-10" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=0.83;entryY=0.931;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="jhiYQdqZbxFGPQ9h7KPZ-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points" />
+            <mxPoint x="395" y="263.5" as="sourcePoint" />
+            <mxPoint x="415" y="200.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jhiYQdqZbxFGPQ9h7KPZ-11" parent="1" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=none;strokeWidth=1;fillColor=none;fontColor=#0085FC;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=0;fontStyle=0;fontSize=16;spacing=5;" value="https://jsonplaceholder.typicode.com/users?username=Bret&amp;amp;website=hildegard.org" vertex="1">
+          <mxGeometry height="41" width="599" x="153" y="286" as="geometry" />
+        </mxCell>
+        <mxCell id="jhiYQdqZbxFGPQ9h7KPZ-12" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=14;" value="&lt;b&gt;protocol&lt;/b&gt; (secure) - https" vertex="1">
+          <mxGeometry height="30" width="230" x="154" y="321.5" as="geometry" />
+        </mxCell>
+        <mxCell id="jhiYQdqZbxFGPQ9h7KPZ-13" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=14;" value="&lt;b&gt;DNS&lt;/b&gt; -&amp;nbsp;jsonplaceholder.typicode.com" vertex="1">
+          <mxGeometry height="30" width="243" x="154" y="345.5" as="geometry" />
+        </mxCell>
+        <mxCell id="jhiYQdqZbxFGPQ9h7KPZ-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=14;" value="&lt;b&gt;Resource Path or Endpoint&lt;/b&gt; - /users" vertex="1">
+          <mxGeometry height="30" width="249" x="154" y="367.5" as="geometry" />
+        </mxCell>
+        <mxCell id="jhiYQdqZbxFGPQ9h7KPZ-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontStyle=1;fontSize=16;" value="API/Web URL&amp;nbsp; :" vertex="1">
+          <mxGeometry height="30" width="119" x="25" y="291.5" as="geometry" />
+        </mxCell>
+        <mxCell id="jhiYQdqZbxFGPQ9h7KPZ-16" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=14;" value="&lt;b&gt;Query Parameter&lt;/b&gt; - &lt;font style=&quot;font-size: 17px; color: rgb(65, 24, 255);&quot;&gt;?&lt;/font&gt;username=Bret&lt;font style=&quot;font-size: 16px; color: rgb(66, 19, 255);&quot;&gt;&amp;amp;&lt;/font&gt;website=hildegard.org" vertex="1">
+          <mxGeometry height="30" width="382" x="153" y="392.5" as="geometry" />
+        </mxCell>
+        <mxCell id="jhiYQdqZbxFGPQ9h7KPZ-18" edge="1" parent="1" source="jhiYQdqZbxFGPQ9h7KPZ-16" style="endArrow=classic;html=1;rounded=0;entryX=0.775;entryY=0.943;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="jhiYQdqZbxFGPQ9h7KPZ-11" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points" />
+            <mxPoint x="365" y="394.5" as="sourcePoint" />
+            <mxPoint x="415" y="344.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jhiYQdqZbxFGPQ9h7KPZ-21" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="460" y="318" as="sourcePoint" />
+            <mxPoint x="755" y="316" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jhiYQdqZbxFGPQ9h7KPZ-22" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;?&lt;/font&gt;&lt;/b&gt; - Start of Query Parameter" vertex="1">
+          <mxGeometry height="30" width="249" x="154" y="422.5" as="geometry" />
+        </mxCell>
+        <mxCell id="jhiYQdqZbxFGPQ9h7KPZ-23" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;&amp;amp;&lt;/b&gt;&lt;/span&gt; - Separator between Query Parameters" vertex="1">
+          <mxGeometry height="30" width="249" x="154" y="447" as="geometry" />
+        </mxCell>
+        <mxCell id="a0QPTMZOgcdEXYG5gXZu-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;KEY = VALUE&lt;/b&gt;" vertex="1">
+          <mxGeometry height="26" width="117" x="470" y="126" as="geometry" />
+        </mxCell>
+        <mxCell id="a0QPTMZOgcdEXYG5gXZu-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;KEY = VALUE&lt;/b&gt;" vertex="1">
+          <mxGeometry height="26" width="108" x="469" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="a0QPTMZOgcdEXYG5gXZu-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;KEY = VALUE&lt;/b&gt;" vertex="1">
+          <mxGeometry height="26" width="156" x="589" y="270" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
