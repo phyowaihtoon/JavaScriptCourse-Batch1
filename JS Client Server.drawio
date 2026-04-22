@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" pages="11">
+<mxfile host="app.diagrams.net" pages="10">
   <diagram name="Load A Web Page" id="AWi2PZ7SZuILrH6djtD5">
     <mxGraphModel dx="774" dy="451" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -364,7 +364,7 @@
           <mxGeometry height="134" width="157" x="44" y="171" as="geometry" />
         </mxCell>
         <mxCell id="IyQq4577DZhqqImFuO1w-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=0;fontSize=16;" value="&lt;font&gt;&lt;b&gt;&lt;span&gt;HTTP&lt;/span&gt;&lt;/b&gt;&lt;/font&gt;&lt;div&gt;&lt;b&gt;&lt;span&gt;HyperText Transfer Protocol&lt;/span&gt;&lt;/b&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="36" width="319" x="93" y="10" as="geometry" />
+          <mxGeometry height="36" width="794" x="2" y="7" as="geometry" />
         </mxCell>
         <mxCell id="IyQq4577DZhqqImFuO1w-2" parent="1" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/laptop_client.svg;" value="" vertex="1">
           <mxGeometry height="111.11" width="100" x="48" y="183.22" as="geometry" />
@@ -444,6 +444,9 @@
             <mxPoint x="543" y="289" as="sourcePoint" />
             <mxPoint x="593" y="239" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="74PbDTbFcGgaGEUZafKs-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1;fontSize=16;" value="HTTP Request Message Format" vertex="1">
+          <mxGeometry height="30" width="816" x="2" y="455" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
@@ -759,17 +762,6 @@
         </mxCell>
         <mxCell id="UPxwGkJJr0j53Y9DHid6-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="Web Application" vertex="1">
           <mxGeometry height="30" width="60" x="388" y="72" as="geometry" />
-        </mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
-  <diagram id="ZcgOb_k13imQKzMMkyOE" name="Page-11">
-    <mxGraphModel dx="774" dy="451" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
-      <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
-        <mxCell id="uS2UimhV8r2kct-ZXYQq-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;span style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;; font-size: medium; text-align: start; background-color: rgb(86, 86, 218);&quot;&gt;Leanne Graham&lt;/span&gt;" vertex="1">
-          <mxGeometry height="30" width="190" x="140" y="100" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

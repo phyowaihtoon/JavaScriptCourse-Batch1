@@ -1,6 +1,7 @@
 
 document.getElementById("btn-load").addEventListener("click", showUsers);
 document.getElementById("btn-search").addEventListener("click", searchUser);
+document.getElementById("btn-clear").addEventListener("click", clearSearchCriteria);
 
 //Name function to show users in table
 //Use for loop to loop through users array and show in table
@@ -56,15 +57,24 @@ async function showUsers() {
 //Search User
 async function searchUser() {
 
+    let url="https://jsonplaceholder.typicode.com/users";
+
     document.getElementById("loading").style.display = "block";
 
     let userName = document.getElementById("search-name").value;
+    let userEmail = document.getElementById("search-email").value;
 
-    //Interpolation
-    //let url = `https://jsonplaceholder.typicode.com/users?name=${userName}`;
+    if (userName === "" && userEmail !== "") {
+         url = "https://jsonplaceholder.typicode.com/users?email=" + userEmail;
+    }
 
-    //Concatenation
-    let url = "https://jsonplaceholder.typicode.com/users?name=" + userName;
+    if(userName !== "" && userEmail ===""){
+        url = "https://jsonplaceholder.typicode.com/users?name=" + userName;
+    }
+
+    if(userName !=="" && userEmail !==""){
+        url = "https://jsonplaceholder.typicode.com/users?name=" + userName+"&email="+userEmail;
+    }
 
     let tableBody = document.getElementById("table-body");
     tableBody.innerHTML = "";
@@ -97,4 +107,10 @@ async function searchUser() {
 
 
 
+}
+
+
+function clearSearchCriteria(){
+    document.getElementById("search-name").value = "";
+    document.getElementById("search-email").value = "";
 }
