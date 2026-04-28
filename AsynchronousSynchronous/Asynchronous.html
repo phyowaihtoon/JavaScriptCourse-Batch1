@@ -1,0 +1,33 @@
+<script>
+
+    // JS is single-threaded language.
+    // Java is multi-threaded language.
+
+    console.log("-------- Synchronous ---------");
+    console.log("Line 1"); // 10 mins //block
+    console.log("Line 2"); // 5 mins
+    console.log("Line 3");
+    console.log("Line 4");
+
+
+    console.log("-------- Asynchronous ---------");
+    console.log("Line 1");
+
+    //Waiting or processing in the background
+    setTimeout( () =>
+    { 
+        console.log("Line 2"); 
+    }, 1000);
+
+    setTimeout( () =>
+    { 
+        console.log("Line 3"); 
+    }, 1000);
+
+    console.log("Line 4");
+
+    setTimeout(function (){
+        console.log("Hello");
+    },1000);
+
+</script>

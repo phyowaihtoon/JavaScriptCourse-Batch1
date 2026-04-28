@@ -30,6 +30,8 @@ async function loadPosts() {
 
     });
 
+    console.log("Loading posts done.");
+
 }
 
 async function loadUsers() {
@@ -39,12 +41,15 @@ async function loadUsers() {
     const res = await fetch(usersURL);
     users = await res.json();
 
+    console.log("Loading users done.");
+
 }
 
 //Function Call on form load
+console.log("Loading users starts.");
 loadUsers();
+console.log("Loading posts starts.");
 loadPosts();
-
 
 async function createPost() {
 
