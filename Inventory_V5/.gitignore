@@ -3,4 +3,4 @@ node_modules/
 dist/
 
 # Local Supabase URL + publishable key — keep out of version control
-#public/js/config.js
+public/js/config.js
