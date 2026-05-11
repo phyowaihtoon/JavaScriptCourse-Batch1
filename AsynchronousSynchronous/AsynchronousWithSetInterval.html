@@ -13,8 +13,6 @@
     <button id="btn-start">Start</button>
     <button id="btn-end">End</button>
 
-
-
     <script>
 
         let count = 0;
@@ -22,27 +20,22 @@
         document.getElementById("btn-start").addEventListener("click", startCount);
         document.getElementById("btn-end").addEventListener("click", endCount);
 
-        let startCounter; //undefined
+        let uniqueIDStartCounter; 
 
         function startCount() {
 
-            startCounter = setInterval(() => {
+            uniqueIDStartCounter = setInterval(() => {
                 count++;
                 document.getElementById("count").innerText = count;
-            }, 1000);
+            }, 500);
+
+            
 
         }
-
-        let student = {
-            name : "Mg Mg"
-        };
 
         function endCount() {
-            clearInterval(startCounter);
+            clearInterval(uniqueIDStartCounter);
         }
-
-
-
 
     </script>
 </body>

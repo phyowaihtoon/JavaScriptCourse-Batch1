@@ -1,6 +1,5 @@
 
 let users = [];
-
 document.getElementById("btn-create-post").addEventListener("click", createPost);
 document.getElementById("btn-clear-post").addEventListener("click", clearPost);
 
@@ -30,7 +29,7 @@ async function loadPosts() {
 
     });
 
-    console.log("Loading posts done.");
+    console.log("Load Posts done");
 
 }
 
@@ -41,15 +40,16 @@ async function loadUsers() {
     const res = await fetch(usersURL);
     users = await res.json();
 
-    console.log("Loading users done.");
+    console.log("Load Users done");
+
+    loadPosts(); // 5 mins
 
 }
 
 //Function Call on form load
-console.log("Loading users starts.");
-loadUsers();
-console.log("Loading posts starts.");
-loadPosts();
+loadUsers(); 
+console.log(" Line 1 ");
+console.log(" Line 2 ");
 
 async function createPost() {
 

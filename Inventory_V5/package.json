@@ -1,0 +1,8 @@
+{
+  "name": "inventory-v5",
+  "private": true,
+  "description": "Product inventory static web app (see docs/PROJECT_SPEC.md)",
+  "scripts": {
+    "start": "npx --yes serve public -l 5173"
+  }
+}

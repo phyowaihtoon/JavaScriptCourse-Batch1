@@ -1,0 +1,6 @@
+node_modules/
+.DS_Store
+dist/
+
+# Local Supabase URL + publishable key — keep out of version control
+public/js/config.js

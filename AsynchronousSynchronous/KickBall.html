@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Title</title>
+    <style>
+        #box {
+            position: relative;
+            width: 800px;
+            height: 100px;
+            padding: 10px;
+            background: skyblue;
+            border: 5px solid darkblue;
+        }
+
+        #ball {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 80px;
+            height: 80px;
+            border-radius: 50px;
+            background-color: red;
+        }
+
+        /* Make ball spin while moving */
+        #entity-ball {
+            position: absolute;
+            left: 0;
+            top: 10px;
+            font-size: 50pt;
+            /* animation-name: spin;
+            animation-duration: 0.3s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite; */
+
+            /* animation: spin 0.3s linear infinite; */
+        }
+
+        @keyframes spinBall {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <!-- <div id="ball"></div> -->
+        <span id="entity-ball">&#9917;</span>
+    </div>
+
+    <button id="btn-start">Start</button>
+    <button id="btn-stop">Stop</button>
+
+    <script>
+
+        document.getElementById("btn-start").addEventListener("click", startBall);
+        document.getElementById("btn-stop").addEventListener("click", stopBall);
+
+        let entityBallEle = document.getElementById("entity-ball");
+
+        let left = 0
+
+        let uniqueID;
+
+        function startBall() {
+
+            //Make the ball spin while moving
+            entityBallEle.style.animation = "spinBall 0.3s linear infinite";
+
+            uniqueID = setInterval(() => {
+                left += 5;
+
+                if (left > 780) {
+                    left = 0;
+                    stopBall();
+                }
+
+                entityBallEle.style.left = `${left}px`;
+
+            }, 10);
+
+        }
+
+        function stopBall() {
+            clearInterval(uniqueID);
+            entityBallEle.style.animation = "";
+        }
+
+    </script>
+</body>
+
+</html>
